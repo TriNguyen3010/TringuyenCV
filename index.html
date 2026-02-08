@@ -185,7 +185,7 @@
                                 <li>• <strong>Cross-functional:</strong> Led cross-chain feature deployment & User
                                     Acquisition events.</li>
                             </ul>
-                            <a href="#" class="btn-portfolio"
+                            <a href="portfolio.html?project=1" class="btn-portfolio"
                                 style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
                                 <i class="fas fa-plus"></i> VIEW MORE
                             </a>
@@ -208,7 +208,7 @@
                                 <li>• <strong>Operations:</strong> Managed cross-functional teams & optimized daily
                                     KPIs/Live-ops.</li>
                             </ul>
-                            <a href="#" class="btn-portfolio"
+                            <a href="portfolio.html?project=2" class="btn-portfolio"
                                 style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
                                 <i class="fas fa-plus"></i> VIEW MORE
                             </a>
@@ -232,7 +232,7 @@
                                 <li>• <strong>Design Approval:</strong> Authorized GDDs & coordinated Live-ops execution
                                     with dev teams.</li>
                             </ul>
-                            <a href="#" class="btn-portfolio"
+                            <a href="portfolio.html?project=3" class="btn-portfolio"
                                 style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
                                 <i class="fas fa-plus"></i> VIEW MORE
                             </a>
@@ -255,7 +255,7 @@
                                 <li>• <strong>Retention:</strong> Analyzed user behavior to improve Retention Rates.
                                 </li>
                             </ul>
-                            <a href="#" class="btn-portfolio"
+                            <a href="portfolio.html?project=4" class="btn-portfolio"
                                 style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
                                 <i class="fas fa-plus"></i> VIEW MORE
                             </a>
@@ -278,7 +278,7 @@
                                 <li>• <strong>Coordination:</strong> Aligned Art/Dev/QA to maintain AAA mobile quality
                                     standards.</li>
                             </ul>
-                            <a href="#" class="btn-portfolio"
+                            <a href="portfolio.html?project=5" class="btn-portfolio"
                                 style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
                                 <i class="fas fa-plus"></i> VIEW MORE
                             </a>
@@ -304,7 +304,7 @@
                                     lifecycle from design to live ops.</li>
                                 <li>• <strong>Bridge:</strong> Acted as communication bridge with Japanese HQ.</li>
                             </ul>
-                            <a href="#" class="btn-portfolio"
+                            <a href="portfolio.html?project=6" class="btn-portfolio"
                                 style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
                                 <i class="fas fa-plus"></i> VIEW MORE
                             </a>
@@ -325,7 +325,7 @@
                                 <li>• <strong>Porting & Logic:</strong> Executed game porting & resolved logic flaws
                                     across devices.</li>
                             </ul>
-                            <a href="#" class="btn-portfolio"
+                            <a href="portfolio.html?project=7" class="btn-portfolio"
                                 style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
                                 <i class="fas fa-plus"></i> VIEW MORE
                             </a>
@@ -480,20 +480,22 @@
                 const grid = document.getElementById('homeProjectsGrid');
                 if (!grid) return;
 
-                // Show first 5 projects for Home
-                const projectsToShow = data.slice(0, 5);
+                // Filter featured projects (isFeature=1) and sort by orderID
+                const projectsToShow = data
+                    .filter(p => p.isFeature === 1)
+                    .sort((a, b) => a.orderID - b.orderID);
 
                 projectsToShow.forEach((project, index) => {
                     const delay = (index + 1) * 100;
                     const card = document.createElement('div');
                     card.className = `project-card fade-in-up delay-${delay}`;
-                    // Link to specific project index (0-based) or ID
-                    card.onclick = () => window.location.href = `portfolio.html?project=${index}`;
+                    // Link to specific project ID (1-based)
+                    card.onclick = () => window.location.href = `portfolio.html?project=${project.id}`;
 
                     card.innerHTML = `
-                        <img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail">
+                        <img src="${project.heroImage}" alt="${project.gameName}" class="project-thumbnail">
                         <div class="project-overlay">
-                            <h3 class="project-title">${project.title}</h3>
+                            <h3 class="project-title">${project.gameName}</h3>
                             <p class="project-company">${project.company}</p>
                             <p class="project-desc">${project.shortDesc}</p>
                         </div>
@@ -507,7 +509,7 @@
                 restartBtn.innerHTML = `
                     <button onclick="document.querySelector('.projects-grid').scrollTo({left: 0, behavior: 'smooth'})"
                         class="btn-restart-round" title="Back to Start">
-                        <i class="fas fa-undo"></i>
+                        <i class="fas fa-arrow-left"></i>
                     </button>
                 `;
                 grid.appendChild(restartBtn);

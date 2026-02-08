@@ -1,223 +1,416 @@
 [
     {
-        "id": "downbelow",
-        "title": "Project Downbelow",
-        "year": "2024 \u2013 PRESENT",
-        "company": "Crema",
-        "shortDesc": "Massive multiplayer project. defining core mechanics.",
-        "longDesc": "The latest project from Crema. I am collaborating with the Game Design team in order to define the core mechanics for the game.",
-        "thumbnail": "images/projects/downbelow_thumb.jpg",
-        "heroImage": "images/projects/downbelow_hero.jpg",
-        "artImage": "images/projects/downbelow_art.jpg",
+        "id": "1",
+        "orderID": 1,
+        "isFeature": 1,
+        "gameName": "Eternals Ecosystem Games",
+        "role": "Lead Game Designer",
+        "year": "Jan 2024 – Present",
+        "duration": "2 years 2 months",
+        "company": "Ninety Eight",
+        "genre": "Web3 / Blockchain Gaming",
+        "teamSize": "15-20 members",
+        "shortDesc": "Web3 Game Design & Tokenomics. Department Leadership.",
+        "longDesc": "Leading the Game Design department at Ninety Eight, managing $1M+ in-game cash flow, architecting tokenomics (inflation/deflation, staking & liquidity), implementing AI tools for automation, and leading cross-chain feature deployment.",
+        "heroImage": "images/projects/01_eternals_ecosystem/HomePreview_Eternals.png",
+        "gallery": [
+            {
+                "image": "images/projects/01_eternals_ecosystem/Eternals_1.png",
+                "caption": "Eternals - Main Interface"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/Eternals_2.png",
+                "caption": "Eternals - Game Economy"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/Eternals_3.png",
+                "caption": "Eternals - Tokenomics"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/Gomoku_1.png",
+                "caption": "Gomoku - Game Board"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/Gomoku_2.png",
+                "caption": "Gomoku - Multiplayer"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/Gomoku_3.png",
+                "caption": "Gomoku - Rankings"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/Gomoku_4.png",
+                "caption": "Gomoku - Rewards"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/HolyFusion_1.png",
+                "caption": "HolyFusion - Main Screen"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/HolyFusion_2.png",
+                "caption": "HolyFusion - Gameplay"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/HolyFusion_3.png",
+                "caption": "HolyFusion - Fusion System"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/HolyFusion_4.png",
+                "caption": "HolyFusion - Rewards"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/Pewpew_1.png",
+                "caption": "PewPew - Battle Arena"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/Pewpew_2.png",
+                "caption": "PewPew - Combat"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/Pewpew_3.png",
+                "caption": "PewPew - Characters"
+            },
+            {
+                "image": "images/projects/01_eternals_ecosystem/Pewpew_4.png",
+                "caption": "PewPew - Leaderboard"
+            }
+        ],
         "contributions": [
             {
-                "title": "Game Direction",
-                "desc": "Developing the game from conception to release."
+                "title": "Department Leadership",
+                "desc": "Managed Game Design dept. & $1M+ in-game cash flow."
             },
             {
-                "title": "Core Mechanics",
-                "desc": "Designing core character mechanics and interaction systems."
+                "title": "Tokenomics Design",
+                "desc": "Architected inflation/deflation, staking & liquidity."
             },
             {
-                "title": "Balancing",
-                "desc": "Game balance and economy formulation."
+                "title": "AI Integration",
+                "desc": "Implemented AI tools to automate pipelines & boost efficiency."
             },
             {
-                "title": "Documentation",
-                "desc": "Documentation and cooperation with the rest of departments."
+                "title": "Cross-functional",
+                "desc": "Led cross-chain feature deployment & User Acquisition events."
             }
         ]
     },
     {
-        "id": "vigor",
-        "title": "Vigor",
-        "year": "2023 \u2013 2024",
-        "company": "Bohemia Interactive",
-        "shortDesc": "Third-Person Extraction Shooter. Improved game content.",
-        "longDesc": "Vigor is a Third-Person Extraction Shooter made by Bohemia Interactive. I collaborated with the Technical Design team in order to improve the game content.",
-        "thumbnail": "images/projects/vigor_thumb.jpg",
-        "heroImage": "images/projects/vigor_hero.jpg",
-        "artImage": "images/projects/vigor_art.jpg",
+        "id": "2",
+        "orderID": 2,
+        "isFeature": 1,
+        "gameName": "Nam Đế",
+        "role": "Lead Game Designer",
+        "year": "Jan 2022 – Dec 2023",
+        "duration": "2 years",
+        "company": "Personal Project",
+        "genre": "4X Strategy / SLG",
+        "teamSize": "7 members",
+        "shortDesc": "Historical Vietnamese SLG. Full product ownership.",
+        "longDesc": "Led a historical Vietnamese SLG project from concept to launch on App Store/Google Play. Managed cross-functional teams and optimized daily KPIs/Live-ops.",
+        "heroImage": "images/projects/02_nam_de/HomePreviewNamDe.png",
+        "gallery": [
+            {
+                "image": "images/projects/02_nam_de/NamDe.png",
+                "caption": "Nam Đế - Main Interface"
+            },
+            {
+                "image": "images/projects/02_nam_de/NamDe2.png",
+                "caption": "Nam Đế - Battle System"
+            },
+            {
+                "image": "images/projects/02_nam_de/NamDe3.PNG",
+                "caption": "Nam Đế - Kingdom Map"
+            }
+        ],
         "contributions": [
             {
-                "title": "Unreal Engine",
-                "desc": "Worked with Unreal Engine optimizing multiplayer systems."
+                "title": "Project Ownership",
+                "desc": "Led historical Vietnamese SLG to launch on App Store/Google Play."
             },
             {
-                "title": "Prototyping",
-                "desc": "Prototyping new systems and modifying game challenges."
-            },
-            {
-                "title": "UI Elements",
-                "desc": "Adding new UI elements for enhanced user experience."
-            },
-            {
-                "title": "System Design",
-                "desc": "System design, documentation and management (Confluence)."
+                "title": "Operations",
+                "desc": "Managed cross-functional teams & optimized daily KPIs/Live-ops."
             }
         ]
     },
     {
-        "id": "temtem",
-        "title": "Temtem",
-        "year": "2020 \u2013 2022",
-        "company": "Crema",
-        "shortDesc": "Creature-collection adventure. Economy balancing.",
-        "longDesc": "A creature-collection adventure. Focused on economy balancing, creature stat progression, and PvP competitive integrity.",
-        "thumbnail": "https://images.unsplash.com/photo-1580234550995-2ac772a4125f?q=80&w=600&auto=format&fit=crop",
-        "heroImage": "https://images.unsplash.com/photo-1580234550995-2ac772a4125f?q=80&w=2670&auto=format&fit=crop",
-        "artImage": "https://images.unsplash.com/photo-1642436892695-1f919c43d78c?q=80&w=1632&auto=format&fit=crop",
+        "id": "3",
+        "orderID": 5,
+        "isFeature": 1,
+        "gameName": "Drift Spirits",
+        "role": "Game Designer",
+        "year": "Sep 2019 – Mar 2023",
+        "duration": "3 years 7 months",
+        "company": "Punch Entertainment (DeNA)",
+        "genre": "Racing / Simulation",
+        "teamSize": "30-50 members",
+        "shortDesc": "Strategic Event Owner for Bandai Namco Singapore.",
+        "longDesc": "Served as Strategic Event Owner for Bandai Namco Singapore. Authorized GDDs and coordinated Live-ops execution with dev teams.",
+        "heroImage": "images/projects/03_drift_spirits/Drift1.png",
+        "gallery": [
+            {
+                "image": "images/projects/03_drift_spirits/Drift1.png",
+                "caption": "Drift Spirits - Racing"
+            },
+            {
+                "image": "images/projects/03_drift_spirits/Drift2.png",
+                "caption": "Drift Spirits - Cars"
+            },
+            {
+                "image": "images/projects/03_drift_spirits/TK1.png",
+                "caption": "Tam Quốc Chí Lược"
+            }
+        ],
         "contributions": [
             {
-                "title": "Economy",
-                "desc": "Modeled game economy regarding inflation/deflation sinks."
+                "title": "Strategic Partnership",
+                "desc": "Strategic Event Owner for Bandai Namco Singapore."
             },
             {
-                "title": "Progression",
-                "desc": "Designed creature stat progression curves."
-            },
-            {
-                "title": "PvP Balance",
-                "desc": "Ensured competitive integrity in PvP matchmaking."
+                "title": "Design Approval",
+                "desc": "Authorized GDDs & coordinated Live-ops execution with dev teams."
             }
         ]
     },
     {
-        "id": "mystic-legends",
-        "title": "Mystic Legends",
-        "year": "2019 \u2013 2020",
-        "company": "Gameloft Studio",
-        "shortDesc": "RPG Project. Core combat system design.",
-        "longDesc": "Designed the core combat system and loot economy tables. Balanced 50+ unique hero skills for PvP arena.",
-        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=RPG+Project",
-        "heroImage": "images/projects/mystic-legends_hero.jpg",
-        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Mystic+Legends+Art",
-        "contributions": [
+        "id": "4",
+        "orderID": 6,
+        "isFeature": 0,
+        "gameName": "VietNam Casino Games",
+        "role": "Game Designer / PM",
+        "year": "Nov 2017 – Aug 2019",
+        "duration": "1 year 10 months",
+        "company": "NHN Entertainment Vietnam",
+        "genre": "Casino / Card Games",
+        "teamSize": "20-30 members",
+        "shortDesc": "Card Games portfolio management. User retention analysis.",
+        "longDesc": "Managed Card Games portfolio (Poker, Blackjack, etc.). Analyzed user behavior to improve Retention Rates.",
+        "heroImage": "images/projects/04_vietnam_casino/cyber-nexus_hero.jpg",
+        "gallery": [
             {
-                "title": "Combat Design",
-                "desc": "Designed core combat mechanics and skill interactions."
+                "image": "images/projects/04_vietnam_casino/cyber-nexus_hero.jpg",
+                "caption": "Card Game UI Design"
             },
             {
-                "title": "Loot Tables",
-                "desc": "Created and balanced loot economy tables."
-            }
-        ]
-    },
-    {
-        "id": "cyber-nexus",
-        "title": "Cyber Nexus",
-        "year": "2018 \u2013 2019",
-        "company": "TechFlow Inc.",
-        "shortDesc": "Web3 Game. Tokenomics and NFT staking.",
-        "longDesc": "Architected tokenomics and NFT staking mechanisms. Reduced inflation rate by 15% via sink mechanics.",
-        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=Web3+Game",
-        "heroImage": "images/projects/cyber-nexus_hero.jpg",
-        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Cyber+Nexus+Art",
-        "contributions": [
-            {
-                "title": "Tokenomics",
-                "desc": "Designed sustainable token flow models."
+                "image": "images/projects/04_vietnam_casino/neon-dash_hero.jpg",
+                "caption": "User Analytics Dashboard"
             },
             {
-                "title": "NFT Staking",
-                "desc": "Implemented staking rewards and utility systems."
+                "image": "images/projects/04_vietnam_casino/galaxy-quest_hero.jpg",
+                "caption": "Retention Strategy Map"
             }
-        ]
-    },
-    {
-        "id": "astro-strike",
-        "title": "Astro Strike",
-        "year": "2017 \u2013 2018",
-        "company": "Indie Team",
-        "shortDesc": "Shooter FPS. Level Design and AI scripting.",
-        "longDesc": "Lead Level Designer for 12 campaign missions. Scripted AI behavior using Blueprints.",
-        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=Shooter+FPS",
-        "heroImage": "images/projects/astro-strike_hero.jpg",
-        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Astro+Strike+Art",
+        ],
         "contributions": [
             {
-                "title": "Level Design",
-                "desc": "Designed 12 unique campaign levels."
-            },
-            {
-                "title": "AI Scripting",
-                "desc": "Scripted enemy behavior trees in Unreal."
-            }
-        ]
-    },
-    {
-        "id": "kingdom-realms",
-        "title": "Kingdom Realms",
-        "year": "2016 \u2013 2017",
-        "company": "Mobile Studio",
-        "shortDesc": "City Builder. Resource economy and progression.",
-        "longDesc": "Designed resource economy and progression systems. Increased D30 retention by 10%.",
-        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=City+Builder",
-        "heroImage": "https://images.unsplash.com/photo-1605806616949-1e87b487bc2a?q=80&w=2670&auto=format&fit=crop",
-        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Kingdom+Realms+Art",
-        "contributions": [
-            {
-                "title": "Economy Design",
-                "desc": "Balanced resource sinks and sources."
+                "title": "Feature Ops",
+                "desc": "Managed Card Games portfolio (Poker, Blackjack, etc.)."
             },
             {
                 "title": "Retention",
-                "desc": "Optimized new user flow for better retention."
+                "desc": "Analyzed user behavior to improve Retention Rates."
             }
         ]
     },
     {
-        "id": "neon-dash",
-        "title": "Neon Dash",
-        "year": "2015 \u2013 2016",
-        "company": "Arcade Games",
-        "shortDesc": "Hyper Casual. Prototyping mechanics.",
-        "longDesc": "Rapid prototyping of 20+ mechanics. Scaled the winning prototype to 5M+ downloads.",
-        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=Hyper+Casual",
-        "heroImage": "images/projects/neon-dash_hero.jpg",
-        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Neon+Dash+Art",
-        "contributions": [
+        "id": "5",
+        "orderID": 4,
+        "isFeature": 1,
+        "gameName": "Heroes of Gaia",
+        "role": "Lead Game Designer / PM",
+        "year": "Mar 2016 – Oct 2017",
+        "duration": "1 year 8 months",
+        "company": "IPI Technology Solutions",
+        "genre": "Action RPG / ARPG",
+        "teamSize": "25-35 members",
+        "shortDesc": "ARPG Balancing & Economy. AAA mobile quality.",
+        "longDesc": "Owned Balancing & Economy for an ARPG project. Aligned Art/Dev/QA to maintain AAA mobile quality standards.",
+        "heroImage": "images/projects/05_heroes_of_gaia/HOG.png",
+        "gallery": [
             {
-                "title": "Prototyping",
-                "desc": "Iterated on multiple mechanics rapidly."
+                "image": "images/projects/05_heroes_of_gaia/HOG.png",
+                "caption": "Heroes of Gaia - Main"
             },
             {
-                "title": "Scaling",
-                "desc": "Optimized monetization for scale."
+                "image": "images/projects/05_heroes_of_gaia/HOG_2.png",
+                "caption": "Heroes of Gaia - Combat"
+            },
+            {
+                "image": "images/projects/05_heroes_of_gaia/HOG3.png",
+                "caption": "Heroes of Gaia - Characters"
+            }
+        ],
+        "contributions": [
+            {
+                "title": "Core Architecture",
+                "desc": "Owned Balancing & Economy for an ARPG project."
+            },
+            {
+                "title": "Coordination",
+                "desc": "Aligned Art/Dev/QA to maintain AAA mobile quality standards."
             }
         ]
     },
     {
-        "id": "galaxy-quest",
-        "title": "Galaxy Quest",
-        "year": "2014 \u2013 2015",
-        "company": "Space Labs",
-        "shortDesc": "Sci-Fi Strategy. Universe generation.",
-        "longDesc": "Procedural generation algorithms for infinite universe exploration.",
-        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=Sci-Fi+Strat",
-        "heroImage": "images/projects/galaxy-quest_hero.jpg",
-        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Galaxy+Quest+Art",
+        "id": "6",
+        "orderID": 7,
+        "isFeature": 0,
+        "gameName": "Legend Cards",
+        "role": "Game Designer / PM",
+        "year": "Nov 2011 – Jan 2016",
+        "duration": "4 years 3 months",
+        "company": "Gloops Vietnam",
+        "genre": "Card Battle / Gacha RPG",
+        "teamSize": "40-60 members",
+        "shortDesc": "Live-Ops & Gacha Balancing. Full lifecycle management.",
+        "longDesc": "Drove revenue strategies for major titles (Legend Cards, Warriors of Odin). Optimized gacha economies to maximize ARPPU. Managed full product lifecycle from design to live ops.",
+        "heroImage": "images/projects/06_legend_cards/LC.png",
+        "gallery": [
+            {
+                "image": "images/projects/06_legend_cards/LC.png",
+                "caption": "Legend Cards - Main"
+            }
+        ],
         "contributions": [
             {
-                "title": "Procedural Gen",
-                "desc": "Developed algorithms for star system generation."
+                "title": "Live-Ops",
+                "desc": "Drove revenue strategies for major titles (Legend Cards, Warriors of Odin)."
+            },
+            {
+                "title": "Gacha Balancing",
+                "desc": "Optimized economies to maximize ARPPU & long-term balance."
+            },
+            {
+                "title": "Lifecycle",
+                "desc": "Managed full product lifecycle from design to live ops."
+            },
+            {
+                "title": "Bridge",
+                "desc": "Acted as communication bridge with Japanese HQ."
             }
         ]
     },
     {
-        "id": "dungeon-crawler",
-        "title": "Dungeon Deep",
-        "year": "2013 \u2013 2014",
-        "company": "Pixel Corp",
-        "shortDesc": "Roguelike. Level layouts.",
-        "longDesc": "Designed intricate dungeon layouts and varying enemy encounters.",
-        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=Roguelike",
-        "heroImage": "images/projects/dungeon-crawler_hero.jpg",
-        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Dungeon+Deep+Art",
+        "id": "7",
+        "orderID": 8,
+        "isFeature": 0,
+        "gameName": "Mobile Game Porting Suite",
+        "role": "QA / Game Designer",
+        "year": "May 2009 – Oct 2011",
+        "duration": "2 years 6 months",
+        "company": "Gameloft Vietnam",
+        "genre": "Multi-Genre / Porting",
+        "teamSize": "50-100 members",
+        "shortDesc": "Game porting & logic fixes across devices.",
+        "longDesc": "Executed game porting and resolved logic flaws across multiple devices. Started career path in game development.",
+        "heroImage": "images/projects/07_mobile_porting/galaxy-quest_hero.jpg",
+        "gallery": [
+            {
+                "image": "images/projects/07_mobile_porting/galaxy-quest_hero.jpg",
+                "caption": "Game Porting Process"
+            },
+            {
+                "image": "images/projects/07_mobile_porting/downbelow_art.jpg",
+                "caption": "Device Compatibility"
+            },
+            {
+                "image": "images/projects/07_mobile_porting/cyber-nexus_hero.jpg",
+                "caption": "QA Testing"
+            }
+        ],
         "contributions": [
             {
-                "title": "Level Design",
-                "desc": "Created 50+ unique dungeon block modules."
+                "title": "Porting & Logic",
+                "desc": "Executed game porting & resolved logic flaws across devices."
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "orderID": 3,
+        "isFeature": 1,
+        "gameName": "Heineken Digital Campaigns",
+        "role": "Game Designer (Freelance)",
+        "year": "2020 – 2023",
+        "duration": "Short-term (3 Projects)",
+        "company": "Heineken Vietnam",
+        "genre": "Casual / Marketing Games",
+        "teamSize": "3-5 members",
+        "shortDesc": "Interactive marketing campaigns & mini-games for brand engagement.",
+        "longDesc": "Designed and developed 3 interactive digital campaigns for Heineken Vietnam, including mini-games, prize wheels, and gamified promotional experiences to boost brand engagement and user participation.",
+        "heroImage": "images/projects/08_heineken_campaigns/Portfolio 14.png",
+        "gallery": [
+            {
+                "image": "images/projects/08_heineken_campaigns/Portfolio 14.png",
+                "caption": "Heineken Campaign"
+            }
+        ],
+        "contributions": [
+            {
+                "title": "Campaign Design",
+                "desc": "Designed interactive mini-games for marketing campaigns."
+            },
+            {
+                "title": "User Engagement",
+                "desc": "Created gamified experiences to boost brand participation."
+            },
+            {
+                "title": "Prize Mechanics",
+                "desc": "Developed prize wheel and reward distribution systems."
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "orderID": 9,
+        "isFeature": 0,
+        "gameName": "Personal Hobby Projects",
+        "role": "Independent Game Developer",
+        "year": "Ongoing",
+        "duration": "All Time",
+        "company": "Personal Projects",
+        "genre": "Various / Experimental",
+        "teamSize": "Solo / 1-2 members",
+        "shortDesc": "Self-driven game development projects for passion & experimentation.",
+        "longDesc": "A collection of personal hobby projects developed during free time, exploring various game genres, mechanics, and technologies. These projects serve as creative outlets for experimentation and continuous learning in game design.",
+        "heroImage": "images/projects/09_personal_hobby/HB1.png",
+        "gallery": [
+            {
+                "image": "images/projects/09_personal_hobby/HB1.png",
+                "caption": "Hobby Project 1"
+            },
+            {
+                "image": "images/projects/09_personal_hobby/HB2.png",
+                "caption": "Hobby Project 2"
+            },
+            {
+                "image": "images/projects/09_personal_hobby/HB3.png",
+                "caption": "Hobby Project 3"
+            },
+            {
+                "image": "images/projects/09_personal_hobby/HB4.png",
+                "caption": "Hobby Project 4"
+            },
+            {
+                "image": "images/projects/09_personal_hobby/HB5.png",
+                "caption": "Hobby Project 5"
+            },
+            {
+                "image": "images/projects/09_personal_hobby/HB6.png",
+                "caption": "Hobby Project 6"
+            }
+        ],
+        "contributions": [
+            {
+                "title": "Full Stack Development",
+                "desc": "Handled all aspects from design to implementation."
+            },
+            {
+                "title": "Experimentation",
+                "desc": "Explored new mechanics, genres, and game engines."
+            },
+            {
+                "title": "Continuous Learning",
+                "desc": "Used projects to stay updated with industry trends."
             }
         ]
     }

@@ -48,6 +48,17 @@
             scroll-behavior: smooth;
         }
 
+        /* Galaxy Canvas Background */
+        #galaxyCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+
         /* Individual Game Card (Full Screen) */
         .game-section {
             flex: 0 0 100vw;
@@ -58,8 +69,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background-size: cover;
-            background-position: center;
+            background: transparent;
         }
 
         /* Background Overlay (Darken) */
@@ -93,29 +103,153 @@
             animation-delay: 0.3s;
         }
 
+        .game-role {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+        }
+
+        .game-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
         .game-year {
-            font-size: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .game-duration {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(0, 208, 132, 0.15);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .game-company {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .game-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .game-genre,
+        .game-team {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .game-genre {
+            background: rgba(138, 43, 226, 0.2);
+            color: #b388ff;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .game-team {
+            background: rgba(0, 150, 255, 0.15);
+            color: #64b5f6;
+            border: 1px solid rgba(0, 150, 255, 0.3);
+        }
+
+        /* Right Side: Gallery Grid */
+        .game-visual {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            opacity: 0;
+            transform: translateX(30px);
+            animation: fadeLeft 1s ease forwards;
+            animation-delay: 0.5s;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .gallery-item:first-child {
+            grid-column: 1 / -1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center center;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:first-child img {
+            height: 280px;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            padding: 40px 15px 15px;
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .game-year {
+            font-size: 1.2rem;
             color: var(--accent);
             letter-spacing: 2px;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             font-weight: 600;
         }
 
         .game-title {
             font-family: var(--font-heading);
-            font-size: 5rem;
+            font-size: 3rem;
             font-weight: 900;
-            line-height: 1;
+            line-height: 1.1;
             margin-bottom: 20px;
             text-transform: uppercase;
+            color: #fff;
         }
 
         .game-desc {
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.6;
-            color: #ddd;
-            margin-bottom: 40px;
-            max-width: 500px;
+            color: #ccc;
+            margin-bottom: 30px;
+            max-width: 450px;
         }
 
         /* Button: My Contributions */
@@ -142,39 +276,20 @@
             box-shadow: 0 10px 20px rgba(0, 208, 132, 0.3);
         }
 
-        /* Right Side: Visuals */
-        .game-visual {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            opacity: 0;
-            transform: translateX(30px);
-            animation: fadeLeft 1s ease forwards;
-            animation-delay: 0.5s;
-        }
-
-        .game-art {
-            max-width: 100%;
-            max-height: 80vh;
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            /* Optional: Add video play button overlay here */
-        }
-
-        /* Side Popup Panel */
+        /* Side Popup Panel - Slides from LEFT */
         .contribution-panel {
             position: fixed;
             top: 0;
-            right: 0;
+            left: 0;
             width: 40vw;
             /* 40% of screen width */
             height: 100vh;
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(10px);
             z-index: 100;
-            transform: translateX(100%);
+            transform: translateX(-100%);
             transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             flex-direction: column;
             padding: 40px;
@@ -186,7 +301,7 @@
         }
 
         .panel-close-btn {
-            align-self: flex-end;
+            align-self: flex-start;
             background: none;
             border: none;
             color: #fff;
@@ -221,6 +336,57 @@
         .contribution-list p {
             font-size: 0.95rem;
             color: #ccc;
+        }
+
+        /* Overlay Backdrop - Only covers left side with soft edge */
+        .panel-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 100vh;
+            background: linear-gradient(to right,
+                    rgba(0, 0, 0, 0.9) 0%,
+                    rgba(0, 0, 0, 0.9) 70%,
+                    rgba(0, 0, 0, 0) 100%);
+            z-index: 98;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        .panel-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* When panel is open - dim text info */
+        body.panel-open .game-info {
+            opacity: 0.15;
+            transition: opacity 0.4s ease;
+        }
+
+        body.panel-open .game-overlay {
+            background: rgba(0, 0, 0, 0.85) !important;
+        }
+
+        /* Gallery stays 100% bright - never affected by overlay */
+        .game-visual {
+            position: relative;
+            z-index: 5;
+        }
+
+        body.panel-open .game-visual {
+            position: relative;
+            z-index: 5;
+            filter: brightness(1) !important;
+            opacity: 1 !important;
+        }
+
+        body.panel-open .game-visual .gallery-item,
+        body.panel-open .game-visual img {
+            filter: brightness(1) !important;
+            opacity: 1 !important;
         }
 
         /* Navigation Arrows (Optional) */
@@ -329,10 +495,131 @@
                 transform: translateX(0);
             }
         }
+
+        /* Image Preview Lightbox - Full Screen Centered */
+        .image-preview-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .image-preview-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .image-preview-overlay img {
+            max-width: 70%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            transform: scale(0.95);
+            transition: transform 0.4s ease;
+        }
+
+        .image-preview-overlay.active img {
+            transform: scale(1);
+        }
+
+        .image-preview-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .image-preview-close:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        .image-preview-caption {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 1.1rem;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 25px;
+            border-radius: 30px;
+        }
+
+        .image-preview-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 55px;
+            height: 55px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .image-preview-nav:hover {
+            background: var(--accent);
+            color: #000;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .image-preview-prev {
+            left: 40px;
+        }
+
+        .image-preview-next {
+            right: 40px;
+        }
+
+        .gallery-item {
+            cursor: pointer;
+        }
+
+        /* Hide scrollbar */
+        .game-visual {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .game-visual::-webkit-scrollbar {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- Galaxy Background Canvas -->
+    <canvas id="galaxyCanvas"></canvas>
 
     <!-- Main Horizontal Scroll Container -->
     <div class="portfolio-container" id="portfolioContainer">
@@ -353,6 +640,20 @@
 
     <!-- Pagination Dots -->
     <div class="pagination-dots" id="paginationDots"></div>
+
+    <!-- Image Preview Overlay -->
+    <div class="image-preview-overlay" id="imagePreview">
+        <button class="image-preview-close" onclick="closeImagePreview()"><i class="fas fa-times"></i></button>
+        <button class="image-preview-nav image-preview-prev" onclick="prevImage(event)"><i
+                class="fas fa-chevron-left"></i></button>
+        <img src="" alt="Preview" id="previewImage" onclick="event.stopPropagation()">
+        <button class="image-preview-nav image-preview-next" onclick="nextImage(event)"><i
+                class="fas fa-chevron-right"></i></button>
+        <div class="image-preview-caption" id="previewCaption"></div>
+    </div>
+
+    <!-- Overlay Backdrop -->
+    <div class="panel-overlay" id="panelOverlay" onclick="closePanel()"></div>
 
     <!-- Side Popup Panel -->
     <div class="contribution-panel" id="contributionPanel">
@@ -386,6 +687,127 @@
     </div>
 
     <script>
+        // ============================================
+        // GALAXY STARFIELD ANIMATION
+        // ============================================
+        (function initGalaxy() {
+            const canvas = document.getElementById('galaxyCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Set canvas size
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            // Stars array
+            const stars = [];
+            const shootingStars = [];
+            const STAR_COUNT = 200;
+
+            // Create stars
+            for (let i = 0; i < STAR_COUNT; i++) {
+                stars.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 1.5 + 0.5,
+                    alpha: Math.random(),
+                    alphaChange: (Math.random() - 0.5) * 0.02,
+                    color: Math.random() > 0.8 ? '#00d084' : '#ffffff'
+                });
+            }
+
+            // Create shooting star
+            function createShootingStar() {
+                shootingStars.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height * 0.5,
+                    length: Math.random() * 100 + 60,
+                    speed: Math.random() * 5 + 3,
+                    angle: Math.PI / 4 + (Math.random() - 0.5) * 0.3,
+                    alpha: 1,
+                    trail: []
+                });
+            }
+
+            // Random shooting star interval - more frequent
+            setInterval(() => {
+                if (Math.random() > 0.4) createShootingStar();
+            }, 800);
+
+            // Animation loop
+            function animate() {
+                // Create gradient background
+                const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+                gradient.addColorStop(0, '#0a0a0a');
+                gradient.addColorStop(0.5, '#0d1117');
+                gradient.addColorStop(1, '#0a0a0a');
+
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // Draw stars
+                stars.forEach(star => {
+                    // Twinkle effect
+                    star.alpha += star.alphaChange;
+                    if (star.alpha <= 0.2 || star.alpha >= 1) {
+                        star.alphaChange *= -1;
+                    }
+
+                    ctx.beginPath();
+                    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = star.color;
+                    ctx.globalAlpha = star.alpha;
+                    ctx.fill();
+                    ctx.globalAlpha = 1;
+                });
+
+                // Draw shooting stars
+                shootingStars.forEach((ss, index) => {
+                    // Move shooting star
+                    ss.x += Math.cos(ss.angle) * ss.speed;
+                    ss.y += Math.sin(ss.angle) * ss.speed;
+                    ss.alpha -= 0.015;
+
+                    // Draw trail
+                    const tailX = ss.x - Math.cos(ss.angle) * ss.length;
+                    const tailY = ss.y - Math.sin(ss.angle) * ss.length;
+
+                    const trailGradient = ctx.createLinearGradient(tailX, tailY, ss.x, ss.y);
+                    trailGradient.addColorStop(0, 'rgba(0, 208, 132, 0)');
+                    trailGradient.addColorStop(1, `rgba(255, 255, 255, ${ss.alpha})`);
+
+                    ctx.beginPath();
+                    ctx.moveTo(tailX, tailY);
+                    ctx.lineTo(ss.x, ss.y);
+                    ctx.strokeStyle = trailGradient;
+                    ctx.lineWidth = 2;
+                    ctx.stroke();
+
+                    // Draw head glow
+                    ctx.beginPath();
+                    ctx.arc(ss.x, ss.y, 3, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255, 255, 255, ${ss.alpha})`;
+                    ctx.fill();
+
+                    // Remove if off screen or faded
+                    if (ss.alpha <= 0 || ss.x > canvas.width + 100 || ss.y > canvas.height + 100) {
+                        shootingStars.splice(index, 1);
+                    }
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        })();
+
+        // ============================================
+        // PORTFOLIO LOGIC
+        // ============================================
+
         // Use a global variable for data if needed later
         let projectsData = [];
 
@@ -396,8 +818,10 @@
         fetch('projects_data.json')
             .then(response => response.json())
             .then(data => {
-                projectsData = data;
-                renderProjects(data);
+                // Sort by orderID
+                const sortedData = data.sort((a, b) => a.orderID - b.orderID);
+                projectsData = sortedData;
+                renderProjects(sortedData);
                 initializeNavigation();
                 checkUrlParams();
             })
@@ -409,15 +833,36 @@
             projects.forEach((project, index) => {
                 const section = document.createElement('section');
                 section.className = 'game-section';
-                section.style.backgroundImage = `url('${project.heroImage}')`;
-                section.id = `project-${index}`; // Add ID for easier selection
+                section.id = `project-${index}`;
+
+                // Build gallery HTML
+                let galleryHTML = '';
+                if (project.gallery && project.gallery.length > 0) {
+                    project.gallery.forEach(item => {
+                        galleryHTML += `
+                            <div class="gallery-item" onclick="openImagePreview('${item.image}', '${item.caption}', ${index})">
+                                <img src="${item.image}" alt="${item.caption}">
+                                <div class="gallery-caption">${item.caption}</div>
+                            </div>
+                        `;
+                    });
+                }
 
                 section.innerHTML = `
                     <div class="game-overlay"></div>
                     <div class="game-content">
                         <div class="game-info">
-                            <p class="game-year">${project.year}</p>
-                            <h1 class="game-title">${project.title}</h1>
+                            <p class="game-role">${project.role || ''}</p>
+                            <div class="game-meta">
+                                <span class="game-year">${project.year}</span>
+                                <span class="game-duration"><i class="fas fa-clock"></i> ${project.duration || ''}</span>
+                            </div>
+                            <p class="game-company">${project.company || ''}</p>
+                            <div class="game-tags">
+                                <span class="game-genre"><i class="fas fa-gamepad"></i> ${project.genre || ''}</span>
+                                <span class="game-team"><i class="fas fa-users"></i> ${project.teamSize || ''}</span>
+                            </div>
+                            <h1 class="game-title">${project.gameName || project.title}</h1>
                             <p class="game-desc">${project.longDesc}</p>
 
                             <button class="btn-contribution" onclick="openPanel(${index})">
@@ -425,7 +870,7 @@
                             </button>
                         </div>
                         <div class="game-visual">
-                            <img src="${project.artImage}" alt="${project.title} Art" class="game-art">
+                            ${galleryHTML}
                         </div>
                     </div>
                 `;
@@ -475,14 +920,17 @@
 
         function checkUrlParams() {
             const urlParams = new URLSearchParams(window.location.search);
-            const projectIndex = urlParams.get('project');
+            const projectParam = urlParams.get('project');
 
-            if (projectIndex !== null) {
+            if (projectParam !== null) {
+                // Convert from 1-based (URL) to 0-based (array index)
+                const projectIndex = parseInt(projectParam) - 1;
+
                 // Short delay to ensure rendering is complete and layout is stable
                 setTimeout(() => {
                     const section = document.getElementById(`project-${projectIndex}`);
                     if (section) {
-                        section.scrollIntoView({ behavior: 'auto' }); // auto to jump instantly, or smooth
+                        section.scrollIntoView({ behavior: 'auto' }); // auto to jump instantly
                     }
                 }, 100);
             }
@@ -507,10 +955,14 @@
             }
 
             document.getElementById('contributionPanel').classList.add('active');
+            document.getElementById('panelOverlay').classList.add('active');
+            document.body.classList.add('panel-open');
         }
 
         function closePanel() {
             document.getElementById('contributionPanel').classList.remove('active');
+            document.getElementById('panelOverlay').classList.remove('active');
+            document.body.classList.remove('panel-open');
         }
 
         // Click outside to close
@@ -526,6 +978,70 @@
 
             if (!isClickInside && !isBtnClick && panel.classList.contains('active')) {
                 closePanel();
+            }
+        });
+
+        // ============================================
+        // IMAGE PREVIEW FUNCTIONS
+        // ============================================
+        let currentGallery = [];
+        let currentImageIndex = 0;
+
+        function openImagePreview(imageSrc, caption, projectIndex) {
+            const preview = document.getElementById('imagePreview');
+            const previewImg = document.getElementById('previewImage');
+            const previewCaption = document.getElementById('previewCaption');
+
+            // Get current project gallery
+            if (projectIndex !== undefined && projectsData[projectIndex]) {
+                currentGallery = projectsData[projectIndex].gallery || [];
+                currentImageIndex = currentGallery.findIndex(item => item.image === imageSrc);
+            }
+
+            previewImg.src = imageSrc;
+            previewCaption.textContent = caption;
+            preview.classList.add('active');
+        }
+
+        function closeImagePreview() {
+            document.getElementById('imagePreview').classList.remove('active');
+        }
+
+        function prevImage(event) {
+            event.stopPropagation();
+            if (currentGallery.length === 0) return;
+
+            currentImageIndex = (currentImageIndex - 1 + currentGallery.length) % currentGallery.length;
+            updatePreviewImage();
+        }
+
+        function nextImage(event) {
+            event.stopPropagation();
+            if (currentGallery.length === 0) return;
+
+            currentImageIndex = (currentImageIndex + 1) % currentGallery.length;
+            updatePreviewImage();
+        }
+
+        function updatePreviewImage() {
+            const item = currentGallery[currentImageIndex];
+            if (item) {
+                document.getElementById('previewImage').src = item.image;
+                document.getElementById('previewCaption').textContent = item.caption;
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function (e) {
+            const preview = document.getElementById('imagePreview');
+            if (!preview.classList.contains('active')) return;
+
+            if (e.key === 'Escape') {
+                closeImagePreview();
+            } else if (e.key === 'ArrowLeft') {
+                prevImage(e);
+            } else if (e.key === 'ArrowRight') {
+                nextImage(e);
             }
         });
     </script>
