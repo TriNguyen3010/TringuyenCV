@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Game Designer",
+    "company": "Crema (2024 - Present)",
+    "description": "Working with the developers of Temtem in a new project from conception to the release.\nSpecialized in Combat & AI.",
+    "linkText": "VIEW DETAILS",
+    "alignment": "right"
+  },
+  {
+    "title": "Mid Technical Designer",
+    "company": "Bohemia Interactive (2023 - 2024)",
+    "description": "Worked with the developers of DayZ and Arma.\nDeveloped Vigor, a Third-Person Looter Shooter for PS, Xbox One Series S/X and Nintendo Switch.",
+    "linkText": "VIEW DETAILS",
+    "alignment": "left"
+  },
+  {
+    "title": "Tools Development for UE & Unity",
+    "company": "UE Marketplace & Unity Asset Store (2022 - Present)",
+    "description": "Creating and maintaining high-quality tools and assets for the Unreald Engine and Unity ecosystems.",
+    "linkText": "VIEW DETAILS",
+    "alignment": "right"
+  }
+]

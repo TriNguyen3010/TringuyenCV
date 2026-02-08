@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri Nguyen | Game Designer</title>
+    <meta name="description" content="Portfolio inspired by minimalist and cinematic dark aesthetics.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Spline+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Fixed Background Video (Spans entire site) -->
+    <div class="video-bg-container">
+        <!-- Placeholder video source. Replace 'video.mp4' with your actual file -->
+        <video class="video-bg" autoplay muted loop playsinline
+            poster="https://via.placeholder.com/1920x1080/000000/00d084?text=Cinematic+Background">
+            <source src="VideoTrailer_3360x1440.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <!-- Navigation (Simplified) -->
+    <!-- Navigation (Refined Layout) -->
+    <nav class="main-nav">
+        <div class="logo"><a href="#home" style="text-decoration:none; color:inherit;">tringuyen</a></div>
+
+        <ul class="nav-links">
+            <li><a href="#backstory">Timeline</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+
+        <a href="portfolio.html" class="btn-portfolio">
+            <i class="fas fa-folder-open"></i> Portfolio
+        </a>
+
+        <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title-large">TRI NGUYEN</h1>
+            <h2 class="hero-subtitle-modern">
+                <span class="subtitle-dynamic"><span class="accent-text typing-cursor"
+                        id="hero-swap-text">Game</span></span>
+                <span class="subtitle-static">Design</span>
+            </h2>
+        </div>
+
+        <div class="scroll-indicator">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+        </div>
+    </section>
+
+    <!-- Bio / Stats Section -->
+    <!-- Bio / Stats Section (Refactored Layout) -->
+    <section id="cv" class="bio-section">
+        <div class="container">
+
+            <div class="bio-grid-new">
+                <!-- Column 1: Stats & Icons (Left) -->
+                <div class="bio-stats-column fade-in-up delay-100">
+                    <div class="stat-block">
+                        <i class="fas fa-trophy stat-icon"></i>
+                        <span class="stat-value">10+</span>
+                        <span class="stat-desc">Years Experience</span>
+                    </div>
+                    <div class="stat-divider"></div>
+
+                    <div class="stat-block">
+                        <i class="fas fa-building stat-icon"></i>
+                        <span class="stat-value">5+</span>
+                        <span class="stat-desc">Top Studios</span>
+                    </div>
+                    <div class="stat-divider"></div>
+
+                    <div class="stat-block">
+                        <i class="fas fa-gamepad stat-icon"></i>
+                        <span class="stat-value">4+</span>
+                        <span class="stat-desc">Key Genres</span>
+                    </div>
+                    <div class="stat-divider"></div>
+
+                    <div class="stat-block">
+                        <i class="fas fa-coins stat-icon"></i>
+                        <span class="stat-value">$1M+</span>
+                        <span class="stat-desc">Web3 Cash Flow</span>
+                    </div>
+                    <div class="stat-divider"></div>
+
+                    <div class="stat-block">
+                        <i class="fas fa-microchip stat-icon"></i>
+                        <span class="stat-value">AI</span>
+                        <span class="stat-desc">Automation Expert</span>
+                    </div>
+                </div>
+
+
+                <!-- Header: Spans Center & Right Columns -->
+                <div class="bio-header fade-in-up">
+                    <h2 class="bio-title-large">MY NAME IS TRÍ NGUYỄN,<br>GAME DESIGNER.</h2>
+                </div>
+
+                <!-- Column 2: Main Bio Text (Center) -->
+                <div class="bio-text-column fade-in-up delay-200">
+
+                    <div class="bio-paragraphs">
+                        <p><strong>As a Game Design expert with over 10 years of hands-on experience</strong>, I have
+                            established my proven track record at industry-leading corporations such as
+                            <strong>Gameloft, DeNA (Japan), and NHN (Korea)</strong>.
+                        </p>
+
+                        <p>With a <strong>Product Owner mindset</strong>, I possess extensive expertise across a diverse
+                            range of genres—from Casual, Gacha, and Action RPG to complex GameFi models. I have directly
+                            spearheaded strategic collaborations, taking full responsibility for materializing product
+                            visions and meeting the rigorous standards of prestigious partners like <strong>Bandai Namco
+                                and Heineken</strong>.</p>
+
+                        <p>Currently, as a <strong>Lead Game Designer</strong>, I focus on architecting large-scale Web3
+                            Game Ecosystems with operational cash flows exceeding <strong>$1,000,000</strong>. By
+                            pioneering the integration of AI Automation, I comprehensively optimize production workflows
+                            through a data-driven approach, ensuring a perfect synergy between player experience and
+                            revenue growth objectives.</p>
+                    </div>
+
+                    <!-- Bio CTA Removed -->
+                </div>
+
+                <!-- Column 3: Portrait Image (Right) -->
+                <div class="bio-image-column fade-in-up delay-300">
+                    <div class="portrait-container">
+                        <!-- Main Portrait Image -->
+                        <img src="avatar.jpg" alt="Tri Nguyen Portrait" class="portrait-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Backstory Section -->
+    <section id="backstory" class="timeline-section" style="background: rgba(0, 0, 0, 0.6);">
+        <div class="container">
+            <div class="text-center fade-in-up">
+                <h2 style="font-size: 2.5rem; margin-bottom: 10px;">
+                    <span class="typing-static">MY </span>
+                    <span class="typing-dynamic" id="backstory-typing-text">Backstory</span>
+                </h2>
+                <div style="width: 60px; height: 2px; background: rgba(255,255,255,0.2); margin: 0 auto 60px;"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- 1. External Web3 (Right) -->
+                <div class="timeline-item right">
+                    <div class="timeline-mask">
+                        <div class="timeline-content timeline-slide-in-right delay-100">
+                            <span class="date">Jan 2024 – Present (2 years 2 months)</span>
+                            <h3 class="role" style="font-size: 1.5rem; font-weight: 700;">LEAD GAME DESIGNER</h3>
+                            <p class="company" style="font-family: 'Montserrat', sans-serif; color: var(--accent);">
+                                Ninety Eight</p>
+                            <ul
+                                style="margin-top: 15px; font-size: 0.95rem; color: #ccc; line-height: 1.6; list-style: none; padding-left: 0;">
+                                <li style="margin-bottom: 8px;">• <strong>Department Leadership:</strong> Managed Game
+                                    Design dept. & $1M+ in-game cash flow.</li>
+                                <li style="margin-bottom: 8px;">• <strong>Tokenomics Design:</strong> Architected
+                                    inflation/deflation, staking & liquidity.</li>
+                                <li style="margin-bottom: 8px;">• <strong>AI Integration:</strong> Implemented AI tools
+                                    to automate pipelines & boost efficiency.</li>
+                                <li>• <strong>Cross-functional:</strong> Led cross-chain feature deployment & User
+                                    Acquisition events.</li>
+                            </ul>
+                            <a href="#" class="btn-portfolio"
+                                style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
+                                <i class="fas fa-plus"></i> VIEW MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Personal Project (Left) -->
+                <div class="timeline-item left">
+                    <div class="timeline-mask">
+                        <div class="timeline-content timeline-slide-in-left delay-200">
+                            <span class="date">Jan 2022 – Dec 2023 (2 years)</span>
+                            <h3 class="role" style="font-size: 1.5rem; font-weight: 700;">LEAD GAME DESIGNER</h3>
+                            <p class="company" style="font-family: 'Montserrat', sans-serif; color: var(--accent);">
+                                PERSONAL PROJECT (4x SLG)</p>
+                            <ul
+                                style="margin-top: 15px; font-size: 0.95rem; color: #ccc; line-height: 1.6; list-style: none; padding-left: 0;">
+                                <li style="margin-bottom: 8px;">• <strong>Project Ownership:</strong> Led historical
+                                    Vietnamese SLG to launch on App Store/Google Play.</li>
+                                <li>• <strong>Operations:</strong> Managed cross-functional teams & optimized daily
+                                    KPIs/Live-ops.</li>
+                            </ul>
+                            <a href="#" class="btn-portfolio"
+                                style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
+                                <i class="fas fa-plus"></i> VIEW MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Punch Entertainment (Right) -->
+                <div class="timeline-item right">
+                    <div class="timeline-mask">
+                        <div class="timeline-content timeline-slide-in-right delay-300">
+                            <span class="date">Sep 2019 – Mar 2023 (3 years 7 months)</span>
+                            <h3 class="role" style="font-size: 1.5rem; font-weight: 700;">GAME DESIGNER
+                            </h3>
+                            <p class="company" style="font-family: 'Montserrat', sans-serif; color: var(--accent);">
+                                PUNCH ENTERTAINMENT (DeNA)</p>
+                            <ul
+                                style="margin-top: 15px; font-size: 0.95rem; color: #ccc; line-height: 1.6; list-style: none; padding-left: 0;">
+                                <li style="margin-bottom: 8px;">• <strong>Strategic Partnership:</strong> Strategic
+                                    Event Owner for Bandai Namco Singapore.</li>
+                                <li>• <strong>Design Approval:</strong> Authorized GDDs & coordinated Live-ops execution
+                                    with dev teams.</li>
+                            </ul>
+                            <a href="#" class="btn-portfolio"
+                                style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
+                                <i class="fas fa-plus"></i> VIEW MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. NHN Entertainment (Left) -->
+                <div class="timeline-item left">
+                    <div class="timeline-mask">
+                        <div class="timeline-content timeline-slide-in-left delay-100">
+                            <span class="date">Nov 2017 – Aug 2019 (1 year 10 months)</span>
+                            <h3 class="role" style="font-size: 1.5rem; font-weight: 700;">GAME DESIGNER / PM</h3>
+                            <p class="company" style="font-family: 'Montserrat', sans-serif; color: var(--accent);">NHN
+                                ENTERTAINMENT VIETNAM</p>
+                            <ul
+                                style="margin-top: 15px; font-size: 0.95rem; color: #ccc; line-height: 1.6; list-style: none; padding-left: 0;">
+                                <li style="margin-bottom: 8px;">• <strong>Feature Ops:</strong> Managed Card Games
+                                    portfolio (Poker, Blackjack, etc.).</li>
+                                <li>• <strong>Retention:</strong> Analyzed user behavior to improve Retention Rates.
+                                </li>
+                            </ul>
+                            <a href="#" class="btn-portfolio"
+                                style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
+                                <i class="fas fa-plus"></i> VIEW MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. IPI Tech (Right) -->
+                <div class="timeline-item right">
+                    <div class="timeline-mask">
+                        <div class="timeline-content timeline-slide-in-right delay-200">
+                            <span class="date">Mar 2016 – Oct 2017 (1 year 8 months)</span>
+                            <h3 class="role" style="font-size: 1.5rem; font-weight: 700;">LEAD GAME DESIGNER / PM</h3>
+                            <p class="company" style="font-family: 'Montserrat', sans-serif; color: var(--accent);">IPI
+                                TECHNOLOGY SOLUTIONS</p>
+                            <ul
+                                style="margin-top: 15px; font-size: 0.95rem; color: #ccc; line-height: 1.6; list-style: none; padding-left: 0;">
+                                <li style="margin-bottom: 8px;">• <strong>Core Architecture:</strong> Owned Balancing &
+                                    Economy for an ARPG project.</li>
+                                <li>• <strong>Coordination:</strong> Aligned Art/Dev/QA to maintain AAA mobile quality
+                                    standards.</li>
+                            </ul>
+                            <a href="#" class="btn-portfolio"
+                                style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
+                                <i class="fas fa-plus"></i> VIEW MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Gloops Vietnam (Left) -->
+                <div class="timeline-item left">
+                    <div class="timeline-mask">
+                        <div class="timeline-content timeline-slide-in-left delay-300">
+                            <span class="date">Nov 2011 – Jan 2016 (4 years 3 months)</span>
+                            <h3 class="role" style="font-size: 1.5rem; font-weight: 700;">GAME DESIGNER / PM</h3>
+                            <p class="company" style="font-family: 'Montserrat', sans-serif; color: var(--accent);">
+                                GLOOPS VIETNAM</p>
+                            <ul
+                                style="margin-top: 15px; font-size: 0.95rem; color: #ccc; line-height: 1.6; list-style: none; padding-left: 0;">
+                                <li style="margin-bottom: 8px;">• <strong>Live-Ops:</strong> Drove revenue strategies
+                                    for major titles (Legend Cards, Warriors of Odin).</li>
+                                <li style="margin-bottom: 8px;">• <strong>Gacha Balancing:</strong> Optimized economies
+                                    to maximize ARPPU & long-term balance.</li>
+                                <li style="margin-bottom: 8px;">• <strong>Lifecycle:</strong> Managed full product
+                                    lifecycle from design to live ops.</li>
+                                <li>• <strong>Bridge:</strong> Acted as communication bridge with Japanese HQ.</li>
+                            </ul>
+                            <a href="#" class="btn-portfolio"
+                                style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
+                                <i class="fas fa-plus"></i> VIEW MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Gameloft (Right) -->
+                <div class="timeline-item right">
+                    <div class="timeline-mask">
+                        <div class="timeline-content timeline-slide-in-right delay-100">
+                            <span class="date">May 2009 – Oct 2011 (2 years 6 months)</span>
+                            <h3 class="role" style="font-size: 1.5rem; font-weight: 700;">QA / GAME DESIGNER</h3>
+                            <p class="company" style="font-family: 'Montserrat', sans-serif; color: var(--accent);">
+                                GAMELOFT VIETNAM</p>
+                            <ul
+                                style="margin-top: 15px; font-size: 0.95rem; color: #ccc; line-height: 1.6; list-style: none; padding-left: 0;">
+                                <li>• <strong>Porting & Logic:</strong> Executed game porting & resolved logic flaws
+                                    across devices.</li>
+                            </ul>
+                            <a href="#" class="btn-portfolio"
+                                style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
+                                <i class="fas fa-plus"></i> VIEW MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / Work Section (Word Swap Animation) -->
+    <section id="experience" class="timeline-section">
+        <div class="container">
+            <div class="text-center typing-container fade-in-up">
+                <span class="typing-static">My </span>
+                <span class="typing-dynamic" id="typing-text">Experience</span>
+            </div>
+
+            <div class="projects-grid" id="homeProjectsGrid">
+                <!-- Dynamic Projects Loaded Here via script -->
+            </div>
+
+            <!-- Nav Removed -->
+
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="portfolio.html" class="btn-outline">View Full Portfolio <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section (Refreshed Layout) -->
+    <section id="skills" class="skills-section">
+        <div class="skills-grid">
+            <!-- Left: Title -->
+            <div class="skills-left fade-in-up">
+                <h2 class="skills-main-title">CORE SKILLS</h2>
+                <div class="skills-line"></div>
+                <p class="skills-subtitle">(AI-POWERED)</p>
+            </div>
+
+            <!-- Center: Content -->
+            <div class="skills-center fade-in-up delay-100">
+                <!-- 1. AI & Automation -->
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">1. AI & Automation <span class="text-muted">(Next-Gen Mindset)</span>
+                    </h3>
+                    <ul class="skill-list">
+                        <li><strong>AI-Assisted Design:</strong> Leveraging Gemini, and Google Antigravity for rapid
+                            brainstorming, GDD drafting, and high-speed prototyping.</li>
+                        <li><strong>Workflow Automation:</strong> Expert in Google Apps Script to automate data
+                            management pipelines, integrate APIs, and maximize operational efficiency within Google
+                            Sheets.</li>
+                        <li><strong>Prompt Engineering:</strong> Advanced skills in crafting precise instructions to
+                            drive AI in generating technical specifications, game logic, and development assets.</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Game Design & Economy -->
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">2. Game Design & Economy</h3>
+                    <ul class="skill-list">
+                        <li><strong>System & Systemic Design:</strong> Architecting comprehensive GDDs, complex system
+                            logic, and UI/UX mockups using Figma, Miro, and AI-driven visualization tools.</li>
+                        <li><strong>Data & Economy Mastery:</strong> Building robust mathematical models via Excel/SQL
+                            and developing custom control tools through Google Apps Script.</li>
+                        <li><strong>Game Balancing:</strong> Optimizing game balance by synthesizing logical intuition
+                            with simulation tools powered by Antigravity and Google Apps Script.</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Management & Leadership -->
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">3. Management & Leadership</h3>
+                    <ul class="skill-list">
+                        <li><strong>Product Strategy:</strong> Defining Product Roadmaps, managing high-level
+                            stakeholders, and leading cross-functional teams under Agile/Scrum methodologies via Jira,
+                            and Notion.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right: Image -->
+            <div class="skills-right fade-in-up delay-200">
+                <img src="images/projects/dungeon-crawler_hero.jpg" alt="Core Skills Visual" class="skills-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section text-center" style="padding: 60px 0;">
+        <div class="container">
+            <h3 class="section-tag fade-in">TRUSTED PARTNERS</h3>
+            <div class="fade-in delay-200 partners-grid"
+                style="display: flex; gap: 40px; justify-content: center; align-items: center; margin-top: 40px; flex-wrap: wrap;">
+                <!-- Ninety Eight -->
+                <img src="https://s2.coinmarketcap.com/static/img/coins/200x200/10903.png" alt="Ninety Eight"
+                    class="partner-logo" style="height: 50px;">
+                <!-- Heineken -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Heineken_logo.svg/320px-Heineken_logo.svg.png"
+                    alt="Heineken" class="partner-logo" style="height: 40px;">
+                <!-- DeNA -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/DeNA_logo.svg/320px-DeNA_logo.svg.png"
+                    alt="DeNA" class="partner-logo" style="height: 35px;">
+                <!-- Bandai Namco -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Bandai_Namco_Holdings_logo.svg/320px-Bandai_Namco_Holdings_logo.svg.png"
+                    alt="Bandai Namco" class="partner-logo" style="height: 45px;">
+                <!-- Gameloft -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Gameloft_Logo_2020.svg/320px-Gameloft_Logo_2020.svg.png"
+                    alt="Gameloft" class="partner-logo" style="height: 25px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Check Out Porfolio -->
+    <section id="portfolio" class="hero-section" style="height: 60vh; background: transparent;">
+        <div class="hero-content">
+            <p class="hero-subtitle" style="color: var(--text-main); font-size: 1rem;">INTERESTED IN MY PROFILE?</p>
+            <h2 class="hero-title" style="font-size: 3.5rem;">CHECK OUT <br> <span class="accent-text">MY
+                    PORTFOLIO</span></h2>
+            <a href="portfolio.html" class="btn-primary" style="margin-top: 20px;">
+                PORTFOLIO <i class="fas fa-external-link-alt" style="margin-left: 10px;"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="main-footer" id="contact">
+        <div class="container">
+            <div class="footer-info-grid">
+                <div class="footer-item">
+                    <i class="fas fa-map-marker-alt footer-icon"></i>
+                    <span class="footer-label">HỒ CHÍ MINH, VIỆT NAM</span>
+                </div>
+                <div class="footer-item">
+                    <i class="fas fa-envelope footer-icon"></i>
+                    <a href="mailto:tri.nguyenminh1986@gmail.com" class="footer-label"
+                        style="color: inherit; text-decoration: none; transition: color 0.3s;">CONTACT ME</a>
+                </div>
+            </div>
+            <div class="footer-copyright" style="margin-top: 40px; font-size: 0.8rem; opacity: 0.5;">
+                <p>&copy; 2024 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dynamic Project Loader
+        fetch('projects_data.json')
+            .then(response => response.json())
+            .then(data => {
+                const grid = document.getElementById('homeProjectsGrid');
+                if (!grid) return;
+
+                // Show first 5 projects for Home
+                const projectsToShow = data.slice(0, 5);
+
+                projectsToShow.forEach((project, index) => {
+                    const delay = (index + 1) * 100;
+                    const card = document.createElement('div');
+                    card.className = `project-card fade-in-up delay-${delay}`;
+                    // Link to specific project index (0-based) or ID
+                    card.onclick = () => window.location.href = `portfolio.html?project=${index}`;
+
+                    card.innerHTML = `
+                        <img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail">
+                        <div class="project-overlay">
+                            <h3 class="project-title">${project.title}</h3>
+                            <p class="project-company">${project.company}</p>
+                            <p class="project-desc">${project.shortDesc}</p>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+
+                // Append Back to Start Button
+                const restartBtn = document.createElement('div');
+                restartBtn.className = 'project-restart-container fade-in-up delay-300';
+                restartBtn.innerHTML = `
+                    <button onclick="document.querySelector('.projects-grid').scrollTo({left: 0, behavior: 'smooth'})"
+                        class="btn-restart-round" title="Back to Start">
+                        <i class="fas fa-undo"></i>
+                    </button>
+                `;
+                grid.appendChild(restartBtn);
+
+                // --- CRITICAL FIX: Trigger Animation for Dynamic Elements ---
+                // The main script.js observer ran on load, so it missed these new elements.
+                // We must manually observe them or force them visible.
+
+                const observerCallback = (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                };
+
+                const observerOptions = { threshold: 0.1 };
+                const newObserver = new IntersectionObserver(observerCallback, observerOptions);
+
+                // Observe all new cards and the restart button
+                const newCards = grid.querySelectorAll('.project-card, .project-restart-container');
+                newCards.forEach(el => newObserver.observe(el));
+            })
+            .catch(error => console.error('Error loading projects:', error));
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

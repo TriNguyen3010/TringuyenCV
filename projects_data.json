@@ -1,0 +1,224 @@
+[
+    {
+        "id": "downbelow",
+        "title": "Project Downbelow",
+        "year": "2024 \u2013 PRESENT",
+        "company": "Crema",
+        "shortDesc": "Massive multiplayer project. defining core mechanics.",
+        "longDesc": "The latest project from Crema. I am collaborating with the Game Design team in order to define the core mechanics for the game.",
+        "thumbnail": "images/projects/downbelow_thumb.jpg",
+        "heroImage": "images/projects/downbelow_hero.jpg",
+        "artImage": "images/projects/downbelow_art.jpg",
+        "contributions": [
+            {
+                "title": "Game Direction",
+                "desc": "Developing the game from conception to release."
+            },
+            {
+                "title": "Core Mechanics",
+                "desc": "Designing core character mechanics and interaction systems."
+            },
+            {
+                "title": "Balancing",
+                "desc": "Game balance and economy formulation."
+            },
+            {
+                "title": "Documentation",
+                "desc": "Documentation and cooperation with the rest of departments."
+            }
+        ]
+    },
+    {
+        "id": "vigor",
+        "title": "Vigor",
+        "year": "2023 \u2013 2024",
+        "company": "Bohemia Interactive",
+        "shortDesc": "Third-Person Extraction Shooter. Improved game content.",
+        "longDesc": "Vigor is a Third-Person Extraction Shooter made by Bohemia Interactive. I collaborated with the Technical Design team in order to improve the game content.",
+        "thumbnail": "images/projects/vigor_thumb.jpg",
+        "heroImage": "images/projects/vigor_hero.jpg",
+        "artImage": "images/projects/vigor_art.jpg",
+        "contributions": [
+            {
+                "title": "Unreal Engine",
+                "desc": "Worked with Unreal Engine optimizing multiplayer systems."
+            },
+            {
+                "title": "Prototyping",
+                "desc": "Prototyping new systems and modifying game challenges."
+            },
+            {
+                "title": "UI Elements",
+                "desc": "Adding new UI elements for enhanced user experience."
+            },
+            {
+                "title": "System Design",
+                "desc": "System design, documentation and management (Confluence)."
+            }
+        ]
+    },
+    {
+        "id": "temtem",
+        "title": "Temtem",
+        "year": "2020 \u2013 2022",
+        "company": "Crema",
+        "shortDesc": "Creature-collection adventure. Economy balancing.",
+        "longDesc": "A creature-collection adventure. Focused on economy balancing, creature stat progression, and PvP competitive integrity.",
+        "thumbnail": "https://images.unsplash.com/photo-1580234550995-2ac772a4125f?q=80&w=600&auto=format&fit=crop",
+        "heroImage": "https://images.unsplash.com/photo-1580234550995-2ac772a4125f?q=80&w=2670&auto=format&fit=crop",
+        "artImage": "https://images.unsplash.com/photo-1642436892695-1f919c43d78c?q=80&w=1632&auto=format&fit=crop",
+        "contributions": [
+            {
+                "title": "Economy",
+                "desc": "Modeled game economy regarding inflation/deflation sinks."
+            },
+            {
+                "title": "Progression",
+                "desc": "Designed creature stat progression curves."
+            },
+            {
+                "title": "PvP Balance",
+                "desc": "Ensured competitive integrity in PvP matchmaking."
+            }
+        ]
+    },
+    {
+        "id": "mystic-legends",
+        "title": "Mystic Legends",
+        "year": "2019 \u2013 2020",
+        "company": "Gameloft Studio",
+        "shortDesc": "RPG Project. Core combat system design.",
+        "longDesc": "Designed the core combat system and loot economy tables. Balanced 50+ unique hero skills for PvP arena.",
+        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=RPG+Project",
+        "heroImage": "images/projects/mystic-legends_hero.jpg",
+        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Mystic+Legends+Art",
+        "contributions": [
+            {
+                "title": "Combat Design",
+                "desc": "Designed core combat mechanics and skill interactions."
+            },
+            {
+                "title": "Loot Tables",
+                "desc": "Created and balanced loot economy tables."
+            }
+        ]
+    },
+    {
+        "id": "cyber-nexus",
+        "title": "Cyber Nexus",
+        "year": "2018 \u2013 2019",
+        "company": "TechFlow Inc.",
+        "shortDesc": "Web3 Game. Tokenomics and NFT staking.",
+        "longDesc": "Architected tokenomics and NFT staking mechanisms. Reduced inflation rate by 15% via sink mechanics.",
+        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=Web3+Game",
+        "heroImage": "images/projects/cyber-nexus_hero.jpg",
+        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Cyber+Nexus+Art",
+        "contributions": [
+            {
+                "title": "Tokenomics",
+                "desc": "Designed sustainable token flow models."
+            },
+            {
+                "title": "NFT Staking",
+                "desc": "Implemented staking rewards and utility systems."
+            }
+        ]
+    },
+    {
+        "id": "astro-strike",
+        "title": "Astro Strike",
+        "year": "2017 \u2013 2018",
+        "company": "Indie Team",
+        "shortDesc": "Shooter FPS. Level Design and AI scripting.",
+        "longDesc": "Lead Level Designer for 12 campaign missions. Scripted AI behavior using Blueprints.",
+        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=Shooter+FPS",
+        "heroImage": "images/projects/astro-strike_hero.jpg",
+        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Astro+Strike+Art",
+        "contributions": [
+            {
+                "title": "Level Design",
+                "desc": "Designed 12 unique campaign levels."
+            },
+            {
+                "title": "AI Scripting",
+                "desc": "Scripted enemy behavior trees in Unreal."
+            }
+        ]
+    },
+    {
+        "id": "kingdom-realms",
+        "title": "Kingdom Realms",
+        "year": "2016 \u2013 2017",
+        "company": "Mobile Studio",
+        "shortDesc": "City Builder. Resource economy and progression.",
+        "longDesc": "Designed resource economy and progression systems. Increased D30 retention by 10%.",
+        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=City+Builder",
+        "heroImage": "https://images.unsplash.com/photo-1605806616949-1e87b487bc2a?q=80&w=2670&auto=format&fit=crop",
+        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Kingdom+Realms+Art",
+        "contributions": [
+            {
+                "title": "Economy Design",
+                "desc": "Balanced resource sinks and sources."
+            },
+            {
+                "title": "Retention",
+                "desc": "Optimized new user flow for better retention."
+            }
+        ]
+    },
+    {
+        "id": "neon-dash",
+        "title": "Neon Dash",
+        "year": "2015 \u2013 2016",
+        "company": "Arcade Games",
+        "shortDesc": "Hyper Casual. Prototyping mechanics.",
+        "longDesc": "Rapid prototyping of 20+ mechanics. Scaled the winning prototype to 5M+ downloads.",
+        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=Hyper+Casual",
+        "heroImage": "images/projects/neon-dash_hero.jpg",
+        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Neon+Dash+Art",
+        "contributions": [
+            {
+                "title": "Prototyping",
+                "desc": "Iterated on multiple mechanics rapidly."
+            },
+            {
+                "title": "Scaling",
+                "desc": "Optimized monetization for scale."
+            }
+        ]
+    },
+    {
+        "id": "galaxy-quest",
+        "title": "Galaxy Quest",
+        "year": "2014 \u2013 2015",
+        "company": "Space Labs",
+        "shortDesc": "Sci-Fi Strategy. Universe generation.",
+        "longDesc": "Procedural generation algorithms for infinite universe exploration.",
+        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=Sci-Fi+Strat",
+        "heroImage": "images/projects/galaxy-quest_hero.jpg",
+        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Galaxy+Quest+Art",
+        "contributions": [
+            {
+                "title": "Procedural Gen",
+                "desc": "Developed algorithms for star system generation."
+            }
+        ]
+    },
+    {
+        "id": "dungeon-crawler",
+        "title": "Dungeon Deep",
+        "year": "2013 \u2013 2014",
+        "company": "Pixel Corp",
+        "shortDesc": "Roguelike. Level layouts.",
+        "longDesc": "Designed intricate dungeon layouts and varying enemy encounters.",
+        "thumbnail": "https://via.placeholder.com/600x800/111/00d084?text=Roguelike",
+        "heroImage": "images/projects/dungeon-crawler_hero.jpg",
+        "artImage": "https://via.placeholder.com/1200x800/222/00d084?text=Dungeon+Deep+Art",
+        "contributions": [
+            {
+                "title": "Level Design",
+                "desc": "Created 50+ unique dungeon block modules."
+            }
+        ]
+    }
+]

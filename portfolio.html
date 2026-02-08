@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri Nguyen | Projects</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Spline+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Base Reset & Variables */
+        :root {
+            --bg-dark: #0a0a0a;
+            --text-main: #ffffff;
+            --accent: #00d084;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Spline Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            overflow: hidden;
+            /* Hide scrollbars, we control scroll */
+        }
+
+        /* Horizontal Scroll Container */
+        .portfolio-container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+
+        /* Individual Game Card (Full Screen) */
+        .game-section {
+            flex: 0 0 100vw;
+            height: 100vh;
+            scroll-snap-align: start;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Background Overlay (Darken) */
+        .game-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        /* Content Grid */
+        .game-content {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            max-width: 1400px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        /* Left Side: Text */
+        .game-info {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        .game-year {
+            font-size: 1.5rem;
+            color: var(--accent);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .game-title {
+            font-family: var(--font-heading);
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .game-desc {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        /* Button: My Contributions */
+        .btn-contribution {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: #fff;
+            color: #000;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 30px;
+        }
+
+        .btn-contribution:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 208, 132, 0.3);
+        }
+
+        /* Right Side: Visuals */
+        .game-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            transform: translateX(30px);
+            animation: fadeLeft 1s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .game-art {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            /* Optional: Add video play button overlay here */
+        }
+
+        /* Side Popup Panel */
+        .contribution-panel {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 40vw;
+            /* 40% of screen width */
+            height: 100vh;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .contribution-panel.active {
+            transform: translateX(0);
+        }
+
+        .panel-close-btn {
+            align-self: flex-end;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .panel-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 30px;
+        }
+
+        .contribution-list {
+            list-style: none;
+        }
+
+        .contribution-list li {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 2px solid var(--accent);
+        }
+
+        .contribution-list h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .contribution-list p {
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        /* Navigation Arrows (Optional) */
+        .nav-arrow {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            /* Aligned to right like pagination */
+            display: flex;
+            gap: 15px;
+            z-index: 50;
+        }
+
+        .nav-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid var(--accent);
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--accent);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-btn:hover {
+            background: var(--accent);
+            color: #000;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 208, 132, 0.6);
+        }
+
+        /* Pagination Dots */
+        .pagination-dots {
+            position: fixed;
+            top: 30px;
+            /* Moved to top */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 50;
+
+            /* Animation */
+            opacity: 0;
+            animation: dotsFadeIn 1s ease forwards;
+            animation-delay: 0.8s;
+        }
+
+        @keyframes dotsFadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--accent);
+            animation: dotPulse 1.5s ease-out forwards;
+            animation-delay: 1.8s;
+            /* Wait for appearance */
+        }
+
+        @keyframes dotPulse {
+
+            0%,
+            100% {
+                transform: scale(1.1);
+                box-shadow: 0 0 5px rgba(0, 208, 132, 0.4);
+            }
+
+            50% {
+                transform: scale(1.3);
+                box-shadow: 0 0 20px rgba(0, 208, 132, 0.8);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main Horizontal Scroll Container -->
+    <div class="portfolio-container" id="portfolioContainer">
+        <!-- Dynamic Content loaded via JS -->
+    </div>
+
+    <!-- Floating Back Button (To Home) -->
+    <a href="index.html"
+        style="position: fixed; top: 30px; left: 30px; z-index: 50; color: #fff; font-family: var(--font-heading); font-weight: 700; display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <i class="fas fa-arrow-left"></i> BACK TO HOME
+    </a>
+
+    <!-- Navigation Controls (Bottom Right) -->
+    <div class="nav-arrow">
+        <div class="nav-btn" onclick="scrollPrev()"><i class="fas fa-chevron-left"></i></div>
+        <div class="nav-btn" onclick="scrollNext()"><i class="fas fa-chevron-right"></i></div>
+    </div>
+
+    <!-- Pagination Dots -->
+    <div class="pagination-dots" id="paginationDots"></div>
+
+    <!-- Side Popup Panel -->
+    <div class="contribution-panel" id="contributionPanel">
+        <button class="panel-close-btn" onclick="closePanel()">&times;</button>
+        <h2 class="panel-title" id="panelTitle">My Contributions</h2>
+
+        <ul class="contribution-list">
+            <li>
+                <h4>System Design</h4>
+                <p>Designed core loop mechanics and progression systems, ensuring long-term player retention.</p>
+            </li>
+            <li>
+                <h4>Economy Balancing</h4>
+                <p>Modeled game economy in Excel/VBA, simulating inflation curves and sink mechanisms for currency X.
+                </p>
+            </li>
+            <li>
+                <h4>Unreal Engine Implementation</h4>
+                <p>Prototyped new character abilities using Blueprints, working closely with engineering to finalize
+                    smooth gameplay feel.</p>
+            </li>
+            <li>
+                <h4>Testing & Analytics</h4>
+                <p>Analyzed beta test data to refine difficulty curves and loot drop rates.</p>
+            </li>
+        </ul>
+
+        <a href="#" class="btn-contribution" style="margin-top: 40px; justify-content: center; width: 100%;">
+            Watch Trailer <i class="fas fa-play"></i>
+        </a>
+    </div>
+
+    <script>
+        // Use a global variable for data if needed later
+        let projectsData = [];
+
+        // Scroll Logic
+        const container = document.getElementById('portfolioContainer');
+
+        // Fetch Data
+        fetch('projects_data.json')
+            .then(response => response.json())
+            .then(data => {
+                projectsData = data;
+                renderProjects(data);
+                initializeNavigation();
+                checkUrlParams();
+            })
+            .catch(error => console.error('Error loading projects:', error));
+
+        function renderProjects(projects) {
+            const container = document.getElementById('portfolioContainer');
+
+            projects.forEach((project, index) => {
+                const section = document.createElement('section');
+                section.className = 'game-section';
+                section.style.backgroundImage = `url('${project.heroImage}')`;
+                section.id = `project-${index}`; // Add ID for easier selection
+
+                section.innerHTML = `
+                    <div class="game-overlay"></div>
+                    <div class="game-content">
+                        <div class="game-info">
+                            <p class="game-year">${project.year}</p>
+                            <h1 class="game-title">${project.title}</h1>
+                            <p class="game-desc">${project.longDesc}</p>
+
+                            <button class="btn-contribution" onclick="openPanel(${index})">
+                                My Contributions <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="game-visual">
+                            <img src="${project.artImage}" alt="${project.title} Art" class="game-art">
+                        </div>
+                    </div>
+                `;
+                container.appendChild(section);
+            });
+        }
+
+        function initializeNavigation() {
+            const sections = document.querySelectorAll('.game-section');
+            const dotsContainer = document.getElementById('paginationDots');
+
+            // Clear existing dots if any
+            dotsContainer.innerHTML = '';
+
+            // Generate Dots
+            sections.forEach((section, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'dot';
+                if (index === 0) dot.classList.add('active');
+                dot.onclick = () => section.scrollIntoView({ behavior: 'smooth' });
+                dotsContainer.appendChild(dot);
+            });
+
+            // Update Active Dot on Scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const index = Array.from(sections).indexOf(entry.target);
+                        document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                        if (dotsContainer.children[index]) {
+                            dotsContainer.children[index].classList.add('active');
+                        }
+                    }
+                });
+            }, { root: container, threshold: 0.5 });
+
+            sections.forEach(section => observer.observe(section));
+        }
+
+        function scrollNext() {
+            container.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+        }
+
+        function scrollPrev() {
+            container.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+        }
+
+        function checkUrlParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectIndex = urlParams.get('project');
+
+            if (projectIndex !== null) {
+                // Short delay to ensure rendering is complete and layout is stable
+                setTimeout(() => {
+                    const section = document.getElementById(`project-${projectIndex}`);
+                    if (section) {
+                        section.scrollIntoView({ behavior: 'auto' }); // auto to jump instantly, or smooth
+                    }
+                }, 100);
+            }
+        }
+
+        // Panel Logic
+        function openPanel(index) {
+            const project = projectsData[index];
+            if (!project) return;
+
+            document.getElementById('panelTitle').innerText = project.title + " Contributions";
+
+            const list = document.querySelector('.contribution-list');
+            list.innerHTML = '';
+
+            if (project.contributions) {
+                project.contributions.forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<h4>${item.title}</h4><p>${item.desc}</p>`;
+                    list.appendChild(li);
+                });
+            }
+
+            document.getElementById('contributionPanel').classList.add('active');
+        }
+
+        function closePanel() {
+            document.getElementById('contributionPanel').classList.remove('active');
+        }
+
+        // Click outside to close
+        document.addEventListener('click', function (event) {
+            const panel = document.getElementById('contributionPanel');
+            const btns = document.querySelectorAll('.btn-contribution');
+            let isClickInside = panel.contains(event.target);
+            let isBtnClick = false;
+
+            btns.forEach(btn => {
+                if (btn.contains(event.target)) isBtnClick = true;
+            });
+
+            if (!isClickInside && !isBtnClick && panel.classList.contains('active')) {
+                closePanel();
+            }
+        });
+    </script>
+</body>
+
+</html>
