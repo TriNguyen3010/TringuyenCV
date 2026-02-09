@@ -1489,16 +1489,19 @@
             const projectParam = urlParams.get('project');
 
             if (projectParam !== null) {
-                // Convert from 1-based (URL) to 0-based (array index)
-                const projectIndex = parseInt(projectParam) - 1;
+                // Find index by matching project ID
+                // Note: projectParam is string, p.id is string in JSON
+                const targetIndex = projectsData.findIndex(p => p.id == projectParam);
 
-                // Short delay to ensure rendering is complete and layout is stable
-                setTimeout(() => {
-                    const section = document.getElementById(`project-${projectIndex}`);
-                    if (section) {
-                        section.scrollIntoView({ behavior: 'auto' }); // auto to jump instantly
-                    }
-                }, 100);
+                if (targetIndex !== -1) {
+                    // Short delay to ensure rendering is complete and layout is stable
+                    setTimeout(() => {
+                        const section = document.getElementById(`project-${targetIndex}`);
+                        if (section) {
+                            section.scrollIntoView({ behavior: 'auto' }); // auto to jump instantly
+                        }
+                    }, 100);
+                }
             }
         }
 

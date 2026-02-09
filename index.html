@@ -549,6 +549,29 @@
         }
     </script>
 
+    <!-- SCROLL RESTORATION LOGIC -->
+    <script>
+        // Save scroll position
+        window.addEventListener('beforeunload', () => {
+            sessionStorage.setItem('homeScrollY', window.scrollY);
+        });
+
+        // Restore scroll position
+        window.addEventListener('load', () => {
+            const scrollY = sessionStorage.getItem('homeScrollY');
+            // Restore if referrer involves portfolio or self-refresh
+            if (scrollY && (document.referrer.includes('portfolio.html') || document.referrer.includes('index.html') || document.referrer === '')) {
+                // Note: referrer === '' check is risky if fresh load, but useful for some browser behaviors.
+                // Safest is just checking portfolio.html as requested.
+                // But let's stick to the request: "from portfolio page".
+            }
+
+            if (scrollY && document.referrer.includes('portfolio.html')) {
+                window.scrollTo(0, parseInt(scrollY));
+            }
+        });
+    </script>
+
     <script src="script.js"></script>
 </body>
 
