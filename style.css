@@ -1752,16 +1752,26 @@ h4 {
 
 /* ADDED BY ANTIGRAVITY: PARTNER LOGOS */
 .partner-logo {
-    height: 45px !important;
-    max-width: 120px;
+    height: 80px !important;
+    /* Increased size */
+    max-width: 160px;
     width: auto;
     object-fit: contain;
-    transition: all 0.4s ease;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    /* Subtle glass bg */
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
     vertical-align: middle;
-    margin: 0 15px;
 }
 
 .partner-logo:hover {
-    transform: scale(1.1);
+    transform: translateY(-5px) scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 208, 132, 0.15);
 }
