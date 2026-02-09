@@ -1615,15 +1615,26 @@ h4 {
     /* Skills Section Mobile */
     .skills-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-rows: auto auto !important;
+        gap: 20px;
+        min-height: auto !important;
+        padding: 40px 20px;
     }
 
     .skills-left {
-        padding-right: 0;
+        padding: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .skills-center {
+        padding: 0;
+        border-left: none;
     }
 
     .skills-right {
-        display: none;
+        display: none !important;
+        height: 0 !important;
     }
 
     .skill-category {
