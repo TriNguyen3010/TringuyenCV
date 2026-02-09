@@ -26,7 +26,7 @@
     <!-- Fixed Background Video (Spans entire site) -->
     <div class="video-bg-container">
         <!-- Placeholder video source. Replace 'video.mp4' with your actual file -->
-        <video class="video-bg" autoplay muted loop playsinline
+        <video id="bgVideo" class="video-bg" autoplay muted playsinline
             poster="https://via.placeholder.com/1920x1080/000000/00d084?text=Cinematic+Background">
             <source src="VideoTrailer_3360x1440.mp4" type="video/mp4">
         </video>
@@ -198,15 +198,19 @@
                     <div class="timeline-mask">
                         <div class="timeline-content timeline-slide-in-left delay-200">
                             <span class="date">Jan 2022 – Dec 2023 (2 years)</span>
-                            <h3 class="role" style="font-size: 1.5rem; font-weight: 700;">LEAD GAME DESIGNER</h3>
+                            <h3 class="role" style="font-size: 1.5rem; font-weight: 700;">GAME DESIGNER</h3>
                             <p class="company" style="font-family: 'Montserrat', sans-serif; color: var(--accent);">
-                                PERSONAL PROJECT (4x SLG)</p>
+                                PERSONAL PROJECT (4X SLG)</p>
                             <ul
                                 style="margin-top: 15px; font-size: 0.95rem; color: #ccc; line-height: 1.6; list-style: none; padding-left: 0;">
-                                <li style="margin-bottom: 8px;">• <strong>Project Ownership:</strong> Led historical
-                                    Vietnamese SLG to launch on App Store/Google Play.</li>
-                                <li>• <strong>Operations:</strong> Managed cross-functional teams & optimized daily
-                                    KPIs/Live-ops.</li>
+                                <li style="margin-bottom: 8px;">• <strong>Data-Driven Iteration:</strong> Analyzed
+                                    behavior funnels and game economy metrics to execute weekly feature refinements and
+                                    balancing.</li>
+                                <li style="margin-bottom: 8px;">• <strong>Retention & Live-ops:</strong> Coordinated
+                                    real-time data-driven event cycles to improve retention rates and user lifecycle
+                                    value.</li>
+                                <li>• <strong>Behavioral Strategy:</strong> Translated player spending and engagement
+                                    patterns into strategic content roadmaps and revenue goals.</li>
                             </ul>
                             <a href="portfolio.html?project=2" class="btn-portfolio"
                                 style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; padding: 8px 16px; margin-top: 20px; transition: 0.3s;">
@@ -531,6 +535,20 @@
             })
             .catch(error => console.error('Error loading projects:', error));
     </script>
+
+    <!-- Video delay loop script -->
+    <script>
+        const bgVideo = document.getElementById('bgVideo');
+        if (bgVideo) {
+            bgVideo.addEventListener('ended', function () {
+                setTimeout(() => {
+                    bgVideo.currentTime = 0;
+                    bgVideo.play();
+                }, 3000); // 3 second delay before replay
+            });
+        }
+    </script>
+
     <script src="script.js"></script>
 </body>
 

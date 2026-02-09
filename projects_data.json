@@ -13,6 +13,7 @@
         "shortDesc": "Web3 Game Design & Tokenomics. Department Leadership.",
         "longDesc": "Eternals World is a Web3 gaming ecosystem centered on user ownership and interactivity. Beyond being a single game, it aims to build a cross-chain and cross-platform community. By leveraging strategic partnerships, the project delivers real value through interoperable assets, allowing users to use a single NFT to unlock unique experiences and rewards across multiple platforms.",
         "heroImage": "images/projects/01_eternals_ecosystem/HomePreview_Eternals.png",
+        "trailerUrl": "https://www.youtube.com/watch?v=xmj_TBNpOvA",
         "subGames": [
             {
                 "name": "Eternals World",
@@ -103,19 +104,19 @@
         "contributions": [
             {
                 "title": "Department Leadership",
-                "desc": "Managed Game Design dept. & $1M+ in-game cash flow."
+                "desc": "Managed the Game Design department and overseen $1M+ in-game cash flow across the ecosystem."
             },
             {
-                "title": "Tokenomics Design",
-                "desc": "Architected inflation/deflation, staking & liquidity."
+                "title": "Tokenomics & Economy Design",
+                "desc": "Architected inflation/deflation models, staking, and liquidity; strictly controlled RTP (Return to Player) and EV (Expected Value) to ensure long-term sustainability for both users and the project."
+            },
+            {
+                "title": "User ROI Strategy",
+                "desc": "Optimized user ROI (Return on Investment) cycles through balanced reward distribution, maintaining a healthy equilibrium between player earnings and ecosystem stability."
             },
             {
                 "title": "AI Integration",
-                "desc": "Implemented AI tools to automate pipelines & boost efficiency."
-            },
-            {
-                "title": "Cross-functional",
-                "desc": "Led cross-chain feature deployment & User Acquisition events."
+                "desc": "Implemented AI-driven automation into production pipelines to accelerate output and boost operational efficiency."
             }
         ]
     },
@@ -124,15 +125,16 @@
         "orderID": 2,
         "isFeature": 1,
         "gameName": "Nam Đế",
-        "role": "Lead Game Designer",
+        "role": "Game Designer",
         "year": "Jan 2022 – Dec 2023",
         "duration": "2 years",
-        "company": "Personal Project",
+        "company": "Personal Project (4X SLG)",
         "genre": "4X Strategy / SLG",
         "teamSize": "7 members",
         "shortDesc": "Historical Vietnamese SLG. Full product ownership.",
-        "longDesc": "Led a historical Vietnamese SLG project from concept to launch on App Store/Google Play. Managed cross-functional teams and optimized daily KPIs/Live-ops.",
+        "longDesc": "Nam De is a large-scale strategy game (4X SLG) set in a historical Vietnamese context, where players build empires and command armies in real-time battles.",
         "heroImage": "images/projects/02_nam_de/HomePreviewNamDe.png",
+        "trailerUrl": "https://drive.google.com/file/d/12o9UZdF5gI5_rJDcmMmjYfQHbHAuQz4k/view?usp=sharing",
         "gallery": [
             {
                 "image": "images/projects/02_nam_de/NamDe.png",
@@ -149,12 +151,20 @@
         ],
         "contributions": [
             {
-                "title": "Project Ownership",
-                "desc": "Led historical Vietnamese SLG to launch on App Store/Google Play."
+                "title": "Data-Driven FTUE Optimization",
+                "desc": "Analyzed user behavior funnels to identify drop-off points; redesigned the historical Vietnamese-themed tutorial to boost engagement within the first 5 minutes."
             },
             {
-                "title": "Operations",
-                "desc": "Managed cross-functional teams & optimized daily KPIs/Live-ops."
+                "title": "Economy & Balancing (RTP/EV)",
+                "desc": "Controlled RTP (Return to Player) and EV (Expected Value) by fine-tuning building wait times and difficulty curves to ensure long-term economic stability."
+            },
+            {
+                "title": "Retention-Focused Live-ops",
+                "desc": "Designed weekly event cycles emphasizing alliance competition and resource protection; utilized real-time data to optimize daily login frequency and Retention Rate."
+            },
+            {
+                "title": "Behavioral Roadmap & ROI",
+                "desc": "Translated deep-dive analysis of player spending habits into content roadmaps, balancing user experience with project ROI and revenue goals."
             }
         ]
     },
@@ -238,6 +248,7 @@
         "shortDesc": "ARPG Balancing & Economy. AAA mobile quality.",
         "longDesc": "Owned Balancing & Economy for an ARPG project. Aligned Art/Dev/QA to maintain AAA mobile quality standards.",
         "heroImage": "images/projects/05_heroes_of_gaia/HOG.png",
+        "trailerUrl": "https://drive.google.com/file/d/1gvD_ApIoBLyehZv-EUXZaChShDVbhGjq/view?usp=sharing",
         "gallery": [
             {
                 "image": "images/projects/05_heroes_of_gaia/HOG.png",
@@ -337,8 +348,9 @@
         "genre": "Casual / Marketing Games",
         "teamSize": "3-5 members",
         "shortDesc": "Interactive marketing campaigns & mini-games for brand engagement.",
-        "longDesc": "Designed and developed 3 interactive digital campaigns for Heineken Vietnam, including mini-games, prize wheels, and gamified promotional experiences to boost brand engagement and user participation.",
+        "longDesc": "Designed 3 interactive digital campaigns for Heineken Vietnam, featuring custom mini-games and prize wheels to drive brand engagement and user participation through gamified promotional experiences.",
         "heroImage": "images/projects/08_heineken_campaigns/Portfolio 14.png",
+        "trailerUrl": "https://drive.google.com/file/d/1s5v7tu1vNwT31hwk0FfF1Ljujgkda0TA/view?usp=sharing",
         "gallery": [
             {
                 "image": "images/projects/08_heineken_campaigns/Portfolio 14.png",
