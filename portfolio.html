@@ -1359,7 +1359,6 @@
                             galleryHTML += `
                                 <div class="gallery-item" onclick="openImagePreview('${item.image}', '${subGame.name} - ${item.caption}', ${index})">
                                     <img src="${item.image}" alt="${item.caption}">
-                                    <div class="gallery-caption">${item.caption}</div>
                                 </div>
                             `;
                         });
@@ -1375,7 +1374,6 @@
                         galleryHTML += `
                             <div class="gallery-item" onclick="openImagePreview('${item.image}', '${item.caption}', ${index})">
                                 <img src="${item.image}" alt="${item.caption}">
-                                <div class="gallery-caption">${item.caption}</div>
                             </div>
                         `;
                     });

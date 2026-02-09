@@ -789,7 +789,7 @@ h4 {
 
 /* --- Center Column: Text --- */
 .bio-text-column {
-    padding: 1px 40px;
+    padding: 1px 0;
     /* Minimal top padding */
     display: flex;
     flex-direction: column;
@@ -808,7 +808,7 @@ h4 {
 }
 
 .bio-title-large {
-    font-size: 3rem;
+    font-size: 2.2rem;
     /* Large impact title */
     line-height: 1.1;
     color: var(--text-main);
@@ -823,7 +823,7 @@ h4 {
     /* More breathing room */
     color: #bbb;
     margin-bottom: 25px;
-    text-align: justify;
+    text-align: left !important;
     /* Clean text block */
 }
 

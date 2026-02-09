@@ -151,20 +151,16 @@
         ],
         "contributions": [
             {
-                "title": "Data-Driven FTUE Optimization",
-                "desc": "Analyzed user behavior funnels to identify drop-off points; redesigned the historical Vietnamese-themed tutorial to boost engagement within the first 5 minutes."
+                "title": "FTUE",
+                "desc": "Optimized the first 5 minutes by integrating Vietnamese historical narratives to boost early-stage engagement."
             },
             {
-                "title": "Economy & Balancing (RTP/EV)",
-                "desc": "Controlled RTP (Return to Player) and EV (Expected Value) by fine-tuning building wait times and difficulty curves to ensure long-term economic stability."
+                "title": "Funnel Analysis",
+                "desc": "Utilized data-driven insights to minimize churn during the early building phase through difficulty and timer balancing."
             },
             {
-                "title": "Retention-Focused Live-ops",
-                "desc": "Designed weekly event cycles emphasizing alliance competition and resource protection; utilized real-time data to optimize daily login frequency and Retention Rate."
-            },
-            {
-                "title": "Behavioral Roadmap & ROI",
-                "desc": "Translated deep-dive analysis of player spending habits into content roadmaps, balancing user experience with project ROI and revenue goals."
+                "title": "Live-ops",
+                "desc": "Spearheaded weekly competitive events to enhance Alliance dynamics and daily active users (DAU)."
             }
         ]
     },
@@ -198,12 +194,16 @@
         ],
         "contributions": [
             {
-                "title": "Strategic Partnership",
-                "desc": "Strategic Event Owner for Bandai Namco Singapore."
+                "title": "Standardization",
+                "desc": "Standardized GDD and UI/UX documentation to align with strict Japanese partner requirements, reducing revision time by 30%."
             },
             {
-                "title": "Design Approval",
-                "desc": "Authorized GDDs & coordinated Live-ops execution with dev teams."
+                "title": "Risk Management",
+                "desc": "Orchestrated daily cross-functional syncs using Jira to streamline development workflows and eliminate production bottlenecks."
+            },
+            {
+                "title": "Quality Assurance",
+                "desc": "Developed a comprehensive internal QA checklist that significantly improved build stability and minimized post-delivery issues."
             }
         ]
     },
@@ -265,12 +265,16 @@
         ],
         "contributions": [
             {
-                "title": "Core Architecture",
-                "desc": "Owned Balancing & Economy for an ARPG project."
+                "title": "Mathematical Modeling",
+                "desc": "Built complex Excel models to simulate Sources & Sinks, ensuring sustainable economic balance throughout the character lifecycle."
             },
             {
-                "title": "Coordination",
-                "desc": "Aligned Art/Dev/QA to maintain AAA mobile quality standards."
+                "title": "Economic Integrity",
+                "desc": "Established 'Economic Policies' to stabilize asset values and strictly control Power Creep from rewards."
+            },
+            {
+                "title": "Data-Driven Adjustment",
+                "desc": "Leveraged SQL to monitor weekly inflation, fine-tuning drop rates and shop prices to maintain a healthy ecosystem."
             }
         ]
     },
@@ -376,7 +380,7 @@
         "id": "9",
         "orderID": 9,
         "isFeature": 0,
-        "gameName": "Personal Hobby Projects",
+        "gameName": "Habby Project",
         "role": "Independent Game Developer",
         "year": "Ongoing",
         "duration": "All Time",
@@ -414,12 +418,8 @@
         ],
         "contributions": [
             {
-                "title": "Full Stack Development",
-                "desc": "Handled all aspects from design to implementation."
-            },
-            {
-                "title": "Experimentation",
-                "desc": "Explored new mechanics, genres, and game engines."
+                "title": "End-to-End Design",
+                "desc": "Defined complete product frameworks, from core mechanics and UI/UX to economic system flows."
             },
             {
                 "title": "Continuous Learning",
