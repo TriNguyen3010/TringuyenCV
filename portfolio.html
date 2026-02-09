@@ -188,6 +188,126 @@
             overflow-y: auto;
         }
 
+        /* Sub-game sections */
+        .subgame-section {
+            grid-column: 1 / -1;
+            margin-bottom: 10px;
+        }
+
+        .subgame-section:not(:first-child) {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .subgame-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding: 0 5px;
+        }
+
+        .subgame-title {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .subgame-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(0, 208, 132, 0.15);
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .subgame-link:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        .subgame-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        /* No Image - Text Info Card */
+        .no-image-info {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            min-height: 400px;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .no-image-info .info-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .no-image-info .info-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .no-image-info .info-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 20px;
+        }
+
+        .no-image-info .info-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .no-image-info .skill-tag {
+            background: rgba(0, 208, 132, 0.15);
+            border: 1px solid rgba(0, 208, 132, 0.3);
+            color: var(--accent);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .no-image-info .legacy-note {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-style: italic;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
         .gallery-item {
             position: relative;
             border-radius: 12px;
@@ -704,6 +824,30 @@
                 overflow-y: auto;
             }
 
+            /* SubGame mobile */
+            .subgame-section:not(:first-child) {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+
+            .subgame-header {
+                margin-bottom: 10px;
+            }
+
+            .subgame-title {
+                font-size: 0.95rem;
+            }
+
+            .subgame-link {
+                padding: 4px 10px;
+                font-size: 0.65rem;
+            }
+
+            .subgame-gallery {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+
             .gallery-item img {
                 height: 150px;
             }
@@ -715,6 +859,24 @@
             .gallery-caption {
                 font-size: 0.75rem;
                 padding: 25px 10px 10px;
+            }
+
+            /* No image info mobile */
+            .no-image-info {
+                padding: 20px;
+            }
+
+            .no-image-info .info-title {
+                font-size: 1.2rem;
+            }
+
+            .no-image-info .info-text {
+                font-size: 0.85rem;
+            }
+
+            .no-image-info .skill-tag {
+                font-size: 0.65rem;
+                padding: 4px 8px;
             }
 
             /* Navigation */
@@ -1051,9 +1213,37 @@
                 section.className = 'game-section';
                 section.id = `project-${index}`;
 
-                // Build gallery HTML
+                // Build gallery HTML - support subGames or regular gallery
                 let galleryHTML = '';
-                if (project.gallery && project.gallery.length > 0) {
+
+                if (project.subGames && project.subGames.length > 0) {
+                    // Render subGames with titles and links
+                    project.subGames.forEach((subGame, subIndex) => {
+                        galleryHTML += `
+                            <div class="subgame-section">
+                                <div class="subgame-header">
+                                    <span class="subgame-title">${subGame.name}</span>
+                                    ${subGame.link ? `<a href="${subGame.link}" target="_blank" class="subgame-link">Play <i class="fas fa-external-link-alt"></i></a>` : ''}
+                                </div>
+                                <div class="subgame-gallery">
+                        `;
+
+                        subGame.images.forEach(item => {
+                            galleryHTML += `
+                                <div class="gallery-item" onclick="openImagePreview('${item.image}', '${subGame.name} - ${item.caption}', ${index})">
+                                    <img src="${item.image}" alt="${item.caption}">
+                                    <div class="gallery-caption">${item.caption}</div>
+                                </div>
+                            `;
+                        });
+
+                        galleryHTML += `
+                                </div>
+                            </div>
+                        `;
+                    });
+                } else if (project.gallery && project.gallery.length > 0) {
+                    // Render regular gallery
                     project.gallery.forEach(item => {
                         galleryHTML += `
                             <div class="gallery-item" onclick="openImagePreview('${item.image}', '${item.caption}', ${index})">
@@ -1062,6 +1252,26 @@
                             </div>
                         `;
                     });
+                } else if (project.noImage) {
+                    // Render text info card for legacy projects
+                    const skills = project.genre ? project.genre.split('/').map(s => s.trim()) : [];
+                    const contribText = project.contributions ?
+                        project.contributions.map(c => `<strong>${c.title}:</strong> ${c.desc}`).join('<br><br>') :
+                        project.longDesc;
+
+                    galleryHTML = `
+                        <div class="no-image-info">
+                            <div class="info-label">📁 Legacy Project</div>
+                            <div class="info-title">Key Contributions</div>
+                            <div class="info-text">${contribText}</div>
+                            <div class="info-skills">
+                                ${skills.map(s => `<span class="skill-tag">${s}</span>`).join('')}
+                            </div>
+                            <div class="legacy-note">
+                                <i class="fas fa-info-circle"></i> This project predates my portfolio archive. Visual assets are no longer available.
+                            </div>
+                        </div>
+                    `;
                 }
 
                 section.innerHTML = `
@@ -1081,9 +1291,9 @@
                             <h1 class="game-title">${project.gameName || project.title}</h1>
                             <p class="game-desc">${project.longDesc}</p>
 
-                            <button class="btn-contribution" onclick="openPanel(${index})">
+                            ${!project.noImage ? `<button class="btn-contribution" onclick="openPanel(${index})">
                                 My Contributions <i class="fas fa-arrow-right"></i>
-                            </button>
+                            </button>` : ''}
                         </div>
                         <div class="game-visual">
                             ${galleryHTML}
@@ -1127,11 +1337,21 @@
         }
 
         function scrollNext() {
-            container.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                container.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+            }
         }
 
         function scrollPrev() {
-            container.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                container.scrollBy({ top: -window.innerHeight, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+            }
         }
 
         function checkUrlParams() {
@@ -1157,7 +1377,7 @@
             const project = projectsData[index];
             if (!project) return;
 
-            document.getElementById('panelTitle').innerText = project.title + " Contributions";
+            document.getElementById('panelTitle').innerText = (project.gameName || project.title || 'My') + " Contributions";
 
             const list = document.querySelector('.contribution-list');
             list.innerHTML = '';
@@ -1208,9 +1428,25 @@
             const previewImg = document.getElementById('previewImage');
             const previewCaption = document.getElementById('previewCaption');
 
-            // Get current project gallery
+            // Build flat gallery from subGames or regular gallery
             if (projectIndex !== undefined && projectsData[projectIndex]) {
-                currentGallery = projectsData[projectIndex].gallery || [];
+                const project = projectsData[projectIndex];
+                currentGallery = [];
+
+                if (project.subGames && project.subGames.length > 0) {
+                    // Flatten subGames images
+                    project.subGames.forEach(subGame => {
+                        subGame.images.forEach(item => {
+                            currentGallery.push({
+                                image: item.image,
+                                caption: `${subGame.name} - ${item.caption}`
+                            });
+                        });
+                    });
+                } else if (project.gallery) {
+                    currentGallery = project.gallery;
+                }
+
                 currentImageIndex = currentGallery.findIndex(item => item.image === imageSrc);
             }
 

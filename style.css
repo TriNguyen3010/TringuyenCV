@@ -1480,6 +1480,11 @@ h4 {
     /* Last thing to appear */
 }
 
+/* CTA Title Desktop */
+.cta-title {
+    font-size: 3.5rem;
+}
+
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
     .container {
@@ -1505,6 +1510,17 @@ h4 {
     .hero-content {
         padding: 0 15px;
         text-align: center;
+    }
+
+    /* CTA Section Mobile */
+    .cta-title {
+        font-size: 2rem !important;
+    }
+
+    .cta-section {
+        height: auto !important;
+        min-height: 40vh;
+        padding: 40px 0;
     }
 
     /* Bio Section Mobile - Complete overhaul */
@@ -1637,11 +1653,19 @@ h4 {
         flex-direction: column;
         gap: 20px;
         text-align: center;
+        align-items: center;
     }
 
     .footer-item {
         flex-direction: column;
         gap: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footer-label {
+        text-align: center;
     }
 
     /* CTA Section Mobile */
@@ -1717,15 +1741,16 @@ h4 {
 
 /* ADDED BY ANTIGRAVITY: PARTNER LOGOS */
 .partner-logo {
-    filter: grayscale(100%) opacity(0.5);
+    height: 45px !important;
+    max-width: 120px;
+    width: auto;
+    object-fit: contain;
     transition: all 0.4s ease;
     cursor: pointer;
     vertical-align: middle;
     margin: 0 15px;
-    /* Spacing */
 }
 
 .partner-logo:hover {
-    filter: grayscale(0%) opacity(1);
     transform: scale(1.1);
 }

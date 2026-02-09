@@ -11,70 +11,95 @@
         "genre": "Web3 / Blockchain Gaming",
         "teamSize": "15-20 members",
         "shortDesc": "Web3 Game Design & Tokenomics. Department Leadership.",
-        "longDesc": "Leading the Game Design department at Ninety Eight, managing $1M+ in-game cash flow, architecting tokenomics (inflation/deflation, staking & liquidity), implementing AI tools for automation, and leading cross-chain feature deployment.",
+        "longDesc": "Eternals World is a Web3 gaming ecosystem centered on user ownership and interactivity. Beyond being a single game, it aims to build a cross-chain and cross-platform community. By leveraging strategic partnerships, the project delivers real value through interoperable assets, allowing users to use a single NFT to unlock unique experiences and rewards across multiple platforms.",
         "heroImage": "images/projects/01_eternals_ecosystem/HomePreview_Eternals.png",
-        "gallery": [
+        "subGames": [
             {
-                "image": "images/projects/01_eternals_ecosystem/Eternals_1.png",
-                "caption": "Eternals - Main Interface"
+                "name": "Eternals World",
+                "link": "https://eternals.game",
+                "images": [
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/Eternals_1.png",
+                        "caption": "Main Interface"
+                    },
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/Eternals_2.png",
+                        "caption": "Game Economy"
+                    },
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/Eternals_3.png",
+                        "caption": "Tokenomics"
+                    }
+                ]
             },
             {
-                "image": "images/projects/01_eternals_ecosystem/Eternals_2.png",
-                "caption": "Eternals - Game Economy"
+                "name": "Gomoku",
+                "link": "https://eternals.game/gomoku",
+                "images": [
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/Gomoku_1.png",
+                        "caption": "Game Board"
+                    },
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/Gomoku_2.png",
+                        "caption": "Multiplayer"
+                    },
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/Gomoku_3.png",
+                        "caption": "Rankings"
+                    },
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/Gomoku_4.png",
+                        "caption": "Rewards"
+                    }
+                ]
             },
             {
-                "image": "images/projects/01_eternals_ecosystem/Eternals_3.png",
-                "caption": "Eternals - Tokenomics"
+                "name": "HolyFusion",
+                "link": "https://eternals.game/holyfusion",
+                "images": [
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/HolyFusion_1.png",
+                        "caption": "Main Screen"
+                    },
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/HolyFusion_2.png",
+                        "caption": "Gameplay"
+                    },
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/HolyFusion_3.png",
+                        "caption": "Fusion System"
+                    },
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/HolyFusion_4.png",
+                        "caption": "Rewards"
+                    }
+                ]
             },
             {
-                "image": "images/projects/01_eternals_ecosystem/Gomoku_1.png",
-                "caption": "Gomoku - Game Board"
-            },
-            {
-                "image": "images/projects/01_eternals_ecosystem/Gomoku_2.png",
-                "caption": "Gomoku - Multiplayer"
-            },
-            {
-                "image": "images/projects/01_eternals_ecosystem/Gomoku_3.png",
-                "caption": "Gomoku - Rankings"
-            },
-            {
-                "image": "images/projects/01_eternals_ecosystem/Gomoku_4.png",
-                "caption": "Gomoku - Rewards"
-            },
-            {
-                "image": "images/projects/01_eternals_ecosystem/HolyFusion_1.png",
-                "caption": "HolyFusion - Main Screen"
-            },
-            {
-                "image": "images/projects/01_eternals_ecosystem/HolyFusion_2.png",
-                "caption": "HolyFusion - Gameplay"
-            },
-            {
-                "image": "images/projects/01_eternals_ecosystem/HolyFusion_3.png",
-                "caption": "HolyFusion - Fusion System"
-            },
-            {
-                "image": "images/projects/01_eternals_ecosystem/HolyFusion_4.png",
-                "caption": "HolyFusion - Rewards"
-            },
-            {
-                "image": "images/projects/01_eternals_ecosystem/Pewpew_1.png",
-                "caption": "PewPew - Battle Arena"
-            },
-            {
-                "image": "images/projects/01_eternals_ecosystem/Pewpew_2.png",
-                "caption": "PewPew - Combat"
-            },
-            {
-                "image": "images/projects/01_eternals_ecosystem/Pewpew_3.png",
-                "caption": "PewPew - Characters"
-            },
-            {
-                "image": "images/projects/01_eternals_ecosystem/Pewpew_4.png",
-                "caption": "PewPew - Leaderboard"
+                "name": "PewPew",
+                "link": "https://eternals.game/pewpew",
+                "images": [
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/Pewpew_1.png",
+                        "caption": "Battle Arena"
+                    },
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/Pewpew_2.png",
+                        "caption": "Combat"
+                    },
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/Pewpew_3.png",
+                        "caption": "Characters"
+                    },
+                    {
+                        "image": "images/projects/01_eternals_ecosystem/Pewpew_4.png",
+                        "caption": "Leaderboard"
+                    }
+                ]
             }
         ],
+        "gallery": [],
         "contributions": [
             {
                 "title": "Department Leadership",
@@ -174,7 +199,7 @@
     },
     {
         "id": "4",
-        "orderID": 6,
+        "orderID": 10,
         "isFeature": 0,
         "gameName": "VietNam Casino Games",
         "role": "Game Designer / PM",
@@ -185,21 +210,9 @@
         "teamSize": "20-30 members",
         "shortDesc": "Card Games portfolio management. User retention analysis.",
         "longDesc": "Managed Card Games portfolio (Poker, Blackjack, etc.). Analyzed user behavior to improve Retention Rates.",
-        "heroImage": "images/projects/04_vietnam_casino/cyber-nexus_hero.jpg",
-        "gallery": [
-            {
-                "image": "images/projects/04_vietnam_casino/cyber-nexus_hero.jpg",
-                "caption": "Card Game UI Design"
-            },
-            {
-                "image": "images/projects/04_vietnam_casino/neon-dash_hero.jpg",
-                "caption": "User Analytics Dashboard"
-            },
-            {
-                "image": "images/projects/04_vietnam_casino/galaxy-quest_hero.jpg",
-                "caption": "Retention Strategy Map"
-            }
-        ],
+        "heroImage": "",
+        "noImage": true,
+        "gallery": [],
         "contributions": [
             {
                 "title": "Feature Ops",
@@ -291,7 +304,7 @@
     },
     {
         "id": "7",
-        "orderID": 8,
+        "orderID": 11,
         "isFeature": 0,
         "gameName": "Mobile Game Porting Suite",
         "role": "QA / Game Designer",
@@ -302,21 +315,9 @@
         "teamSize": "50-100 members",
         "shortDesc": "Game porting & logic fixes across devices.",
         "longDesc": "Executed game porting and resolved logic flaws across multiple devices. Started career path in game development.",
-        "heroImage": "images/projects/07_mobile_porting/galaxy-quest_hero.jpg",
-        "gallery": [
-            {
-                "image": "images/projects/07_mobile_porting/galaxy-quest_hero.jpg",
-                "caption": "Game Porting Process"
-            },
-            {
-                "image": "images/projects/07_mobile_porting/downbelow_art.jpg",
-                "caption": "Device Compatibility"
-            },
-            {
-                "image": "images/projects/07_mobile_porting/cyber-nexus_hero.jpg",
-                "caption": "QA Testing"
-            }
-        ],
+        "heroImage": "",
+        "noImage": true,
+        "gallery": [],
         "contributions": [
             {
                 "title": "Porting & Logic",
