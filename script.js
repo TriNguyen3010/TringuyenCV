@@ -1,3 +1,9 @@
+// Always land on the hero (name first) unless a #section link was opened
+if (!location.hash && 'scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Intersection Observer for Fade-in Animations
     const observerOptions = {

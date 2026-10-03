@@ -373,6 +373,121 @@
             max-width: 450px;
         }
 
+        /* AI-built highlight (projects with aiBuild in projects_data.json) */
+        .ai-build {
+            position: relative;
+            overflow: hidden;
+            max-width: 480px;
+            margin: -12px 0 28px;
+            padding: 16px 18px;
+            border: 1px solid rgba(0, 208, 132, 0.45);
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(0, 208, 132, 0.14), rgba(0, 208, 132, 0.02));
+            box-shadow: 0 0 32px rgba(0, 208, 132, 0.12);
+        }
+
+        .ai-build::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.08) 50%, transparent 70%);
+            transform: translateX(-100%);
+            animation: aiShine 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes aiShine {
+            60%, 100% { transform: translateX(100%); }
+        }
+
+        .ai-build-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .ai-flow {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
+            margin: 12px 0;
+        }
+
+        .ai-flow span {
+            padding: 5px 10px;
+            border-radius: 99px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            font-size: 0.75rem;
+            color: #fff;
+        }
+
+        .ai-flow em {
+            font-style: normal;
+            font-size: 0.75rem;
+            color: var(--accent);
+        }
+
+        .ai-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .ai-stats div {
+            padding: 8px 6px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.35);
+            text-align: center;
+        }
+
+        .ai-stats b {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            color: #fff;
+        }
+
+        .ai-stats small {
+            font-size: 0.62rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #999;
+        }
+
+        .ai-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .ai-stack span {
+            padding: 3px 8px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            font-size: 0.68rem;
+            color: #bbb;
+        }
+
+        @media (max-width: 768px) {
+            .ai-build {
+                margin: -8px 0 20px;
+                padding: 12px 14px;
+            }
+
+            .ai-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         /* Button: My Contributions */
         .btn-contribution {
             display: inline-flex;
@@ -1401,6 +1516,16 @@
                     `;
                 }
 
+                const ai = project.aiBuild;
+                const aiHTML = ai ? `
+                    <div class="ai-build">
+                        <div class="ai-build-head"><i class="fas fa-robot"></i> ${ai.headline}</div>
+                        <div class="ai-flow">${ai.layers.map(l => `<span>${l}</span>`).join('<em>→</em>')}</div>
+                        <div class="ai-stats">${ai.stats.map(s => `<div><b>${s.value}</b><small>${s.label}</small></div>`).join('')}</div>
+                        <div class="ai-stack">${ai.stack.map(t => `<span>${t}</span>`).join('')}</div>
+                    </div>
+                ` : '';
+
                 section.innerHTML = `
                     <div class="game-overlay"></div>
                     <div class="game-content">
@@ -1417,6 +1542,7 @@
                             </div>
                             <h1 class="game-title">${project.gameName || project.title}</h1>
                             <p class="game-desc">${project.longDesc}</p>
+                            ${aiHTML}
 
                             <div class="game-buttons">
                                 ${!project.noImage ? `<button class="btn-contribution" onclick="openPanel(${index})">

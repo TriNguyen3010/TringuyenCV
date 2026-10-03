@@ -1,5 +1,136 @@
 [
     {
+        "id": "10",
+        "orderID": 0,
+        "isFeature": 1,
+        "gameName": "FANOS Live Events",
+        "role": "Product Owner · AI-Native Full-Stack Builder",
+        "year": "Jul 2026 – Sep 2026",
+        "duration": "3 months · 2 live events",
+        "company": "FANOS · Coin98 Ecosystem",
+        "genre": "Gamification / AI-Built Full-Stack",
+        "teamSize": "1 builder + AI agents",
+        "shortDesc": "Two gamification products built end to end with AI — front end, back end, database — for 1,200+ live players.",
+        "longDesc": "Two real-world gamification products for FANOS, Coin98's fan app — designed and built end to end by me with AI coding agents: player apps, staff and admin tools, venue screens, back end, database, deployment and live operations. Conviction Explorer turned a two-day crypto conference into a mission-and-reward game; Xoay Tròn × FANOS gave Hoàng Dũng's 10,000-guest concert an XP-gated prize wheel.",
+        "heroImage": "images/projects/00_fanos_live/conviction_cover.jpg",
+        "aiBuild": {
+            "headline": "100% AI-built · end to end",
+            "layers": [
+                "Player app",
+                "Staff app",
+                "Admin console",
+                "Back end",
+                "Database",
+                "Deploy"
+            ],
+            "stats": [
+                {
+                    "value": "1,370+",
+                    "label": "commits"
+                },
+                {
+                    "value": "140+",
+                    "label": "merged PRs"
+                },
+                {
+                    "value": "135",
+                    "label": "test files"
+                },
+                {
+                    "value": "10",
+                    "label": "apps · 2 events"
+                }
+            ],
+            "stack": [
+                "Claude Code",
+                "React 19",
+                "TypeScript",
+                "Fastify",
+                "PostgreSQL",
+                "Drizzle ORM",
+                "Supabase",
+                "Railway",
+                "Vercel"
+            ]
+        },
+        "subGames": [
+            {
+                "name": "Conviction Explorer",
+                "link": "https://conviction-event-webapp.vercel.app/explore",
+                "images": [
+                    {
+                        "image": "images/projects/00_fanos_live/conviction_cover.jpg",
+                        "caption": "FANOS Onboarding and Partner Missions"
+                    },
+                    {
+                        "image": "images/projects/00_fanos_live/conviction_map.jpg",
+                        "caption": "Floor Map and Stage Schedule"
+                    },
+                    {
+                        "image": "images/projects/00_fanos_live/conviction_ops.jpg",
+                        "caption": "Staff Scanner App and Admin Console"
+                    },
+                    {
+                        "image": "images/projects/00_fanos_live/conviction_led.jpg",
+                        "caption": "Booth LED Screen Controller"
+                    },
+                    {
+                        "image": "images/projects/00_fanos_live/conviction_results.jpg",
+                        "caption": "Live Results Dashboard"
+                    }
+                ]
+            },
+            {
+                "name": "Xoay Tròn × FANOS",
+                "link": "https://play.fanos.vn/xoaytron_demo",
+                "images": [
+                    {
+                        "image": "images/projects/00_fanos_live/xoaytron_keyart.jpg",
+                        "caption": "Concert Key Visual"
+                    },
+                    {
+                        "image": "images/projects/00_fanos_live/xoaytron_wheel.jpg",
+                        "caption": "Weighted Prize Wheel"
+                    },
+                    {
+                        "image": "images/projects/00_fanos_live/xoaytron_app.jpg",
+                        "caption": "Guest App and Live Leaderboard"
+                    }
+                ]
+            }
+        ],
+        "contributions": [
+            {
+                "title": "AI-Built, End to End",
+                "desc": "Designed and built both products myself with AI coding agents (Claude Code): React 19 + TypeScript front end, Fastify API, PostgreSQL with Drizzle migrations, FANOS SSO, rotating HMAC QR codes, staff and admin tools, automated tests, and cloud deploy on Vercel, Railway and Supabase. 12 weeks · 1,370+ commits · 140+ merged PRs · 135 test files · ~28k lines of TypeScript. Xoay Tròn went from design to show night in about 12 days, with me running the event-night command room."
+            },
+            {
+                "title": "Event Ops Tooling",
+                "desc": "Built the tools that ran both events live. Conviction: a staff app for 221 booth accounts (scan rotating player QR codes, award mission points, redeem gifts and spins at the counter), an admin console (live dashboard, missions, gift stock, players, e-lottery tickets, config, data export), a booth LED controller and an offline stage-draw tool. Xoay Tròn: a staff app with Ticket / Merch / Spin tabs, a 16:9 prize-wheel kiosk, a projector leaderboard and a web admin to edit prize weights and quotas live, without a deploy."
+            },
+            {
+                "title": "Conviction Explorer · Results",
+                "desc": "Designed the full mission → points → reward loop for Conviction 2026 (Ho Chi Minh City, 14–15 Aug): 1,201 active players (87.7% of sign-ups), 15,922 missions completed (13.3 per player), 18,132 QR scans at 98.2% success and a 135-minute average dwell time."
+            },
+            {
+                "title": "Points Economy & Reward Pricing",
+                "desc": "Priced 24 missions (2,050 points max) and every reward sink — merch, spins, e-lottery — with a supply/demand simulator of light, medium and heavy players. Points landed at 31.9% gifts, 26.8% lottery and 23.0% spins, with only 18.2% left unspent."
+            },
+            {
+                "title": "Sponsor Value",
+                "desc": "Built partner missions that generated 947 BAC A BANK waitlist sign-ups and 945 feedback forms (4.87/5), with every player onboarded through the FANOS app."
+            },
+            {
+                "title": "Xoay Tròn × FANOS",
+                "desc": "For Hoàng Dũng's Xoay Tròn concert (≈10,000 guests, 6 Sep 2026): fans earned XP from FANOS sign-up, AI-verified ticket photos and merch purchases, unlocking one prize spin each at 1,500 XP, plus a live XP leaderboard on the projector."
+            },
+            {
+                "title": "Prize Logic & Fairness",
+                "desc": "Balanced a 3,578-prize pool across 9 tiers with per-window quotas, sold-out redistribution and server-authoritative draws. Wheel slices reflect real odds; validated with Monte Carlo simulation, load tests and anti-fraud rules for ticket uploads."
+            }
+        ]
+    },
+    {
         "id": "1",
         "orderID": 1,
         "isFeature": 1,
